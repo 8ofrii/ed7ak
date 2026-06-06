@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز اضحك لطب وتجميل الأسنان | د. محمد موسى</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="مركز اضحك لطب الأسنان (EDHAK Dental Center) بإشراف د. محمد موسى - خدمات زراعة، تجميل، تقويم وتبييض الأسنان بأحدث التقنيات العالمية في بنها ومصر الجديدة.">
+    <meta name="keywords" content="طب أسنان, تجميل أسنان, زراعة أسنان, هوليوود سمايل, تقويم أسنان, طبيب أسنان بنها, دكتور محمد موسى, عيادة أسنان مصر الجديدة, اضحك">
+    <meta name="author" content="EDHAK Dental Center">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <a href="#" class="logo-container">
+                <img src="logo.png" alt="Edhak Logo" class="logo-image">
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">الخدمات</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_gallery">ابتساماتنا</a>
+                <a href="#doctors" class="nav-link" data-i18n="nav_doctors">أطباؤنا</a>
+                <a href="#branches" class="nav-link" data-i18n="nav_branches">الفروع</a>
+                <a href="#booking" class="nav-link" data-i18n="nav_booking_nav">احجز الآن</a>
+            </nav>
+
+            <!-- Header Action buttons -->
+            <div class="header-actions">
+                <button class="lang-toggle-btn" id="langToggle">
+                    <span class="lang-ar">English</span>
+                    <span class="lang-en">العربية</span>
+                </button>
+                <a href="#booking" class="btn btn-primary btn-sm btn-booking-header" data-i18n="btn_book_now">احجز الآن</a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content reveal-on-scroll reveal-left">
+                <h1 class="hero-title lang-ar">اضحك بكل ثقة مع ابتسامة أحلامك</h1>
+                <h1 class="hero-title lang-en">Smile with Confidence, Live with Joy</h1>
+                
+                <p class="hero-description lang-ar">
+                    في مركز "اضحك" لطب الأسنان بإشراف الدكتور محمد موسى، نقدم لكم أرقى خدمات تجميل وزراعة وتقويم الأسنان بأحدث التقنيات والمعدات العالمية، لنمنحكم ابتسامة صحية وجذابة تدوم طويلاً.
+                </p>
+                <p class="hero-description lang-en">
+                    At EDHAK Dental Center, supervised by Dr. Mohamed Moosa, we provide you with premium dental cosmetic, implant, and orthodontic services using the latest global technologies to grant you a long-lasting, healthy, and beautiful smile.
+                </p>
+                
+                <div class="hero-cta-buttons">
+                    <a href="#booking" class="btn btn-primary" data-i18n="btn_schedule_appointment">احجز موعدك الآن</a>
+                    <a href="#services" class="btn btn-outline" data-i18n="btn_explore_services">استكشف خدماتنا</a>
+                </div>
+                
+                <!-- Trust indicators / Reviews -->
+                <div class="hero-reviews">
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+                    <div class="reviews-text">
+                        <span class="lang-ar">تقييم 4.9/5 من أكثر من 2,000 مريض سعيد</span>
+                        <span class="lang-en">4.9/5 Rating from over 2,000 happy patients</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper reveal-on-scroll reveal-right">
+                <div class="premium-image-container">
+                    <div class="gold-gradient-border"></div>
+                    <div class="hero-video-wrapper">
+                        <video id="heroVideo" class="hero-video" autoplay loop muted playsinline poster="logo_orig.png">
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-dentist-examining-patients-teeth-with-mirror-41721-large.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video loops.
+                        </video>
+                        <div class="video-overlay"></div>
+                        <button id="videoControlBtn" class="video-control-btn" aria-label="Toggle Video Playback">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Floating Quick Stats Widget -->
+                    <div class="floating-stat-card">
+                        <div class="stat-icon">
+                            <svg class="stat-badge-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px; color: var(--color-gold-base);">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-val">+15</span>
+                            <span class="stat-lbl lang-ar">عاماً من الخبرة</span>
+                            <span class="stat-lbl lang-en">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <svg class="stat-icon-svg animated-smile" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-base)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 12c0 4.4 3.6 8 8 8s8-3.6 8-8"></path>
+                        <circle cx="9" cy="9" r="1" fill="var(--color-gold-base)"></circle>
+                        <circle cx="15" cy="9" r="1" fill="var(--color-gold-base)"></circle>
+                    </svg>
+                </div>
+                <span class="stat-number">+10,000</span>
+                <span class="stat-label lang-ar">ابتسامة سعيدة تم تصميمها</span>
+                <span class="stat-label lang-en">Happy Smiles Crafted</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <svg class="stat-icon-svg animated-branch" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-base)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <span class="stat-number">2</span>
+                <span class="stat-label lang-ar">فروع مجهزة بالكامل (بنها ومصر الجديدة)</span>
+                <span class="stat-label lang-en">Fully Equipped Branches</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <svg class="stat-icon-svg animated-star" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-base)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <span class="stat-number">99.4%</span>
+                <span class="stat-label lang-ar">نسبة رضا وثقة المرضى لدينا</span>
+                <span class="stat-label lang-en">Patient Satisfaction Rate</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <svg class="stat-icon-svg animated-doctor" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-base)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                </div>
+                <span class="stat-number">100%</span>
+                <span class="stat-label lang-ar">أطباء واستشاريون متخصصون</span>
+                <span class="stat-label lang-en">Specialist Doctors & Consultants</span>
+            </div>
+        </div>
+        <!-- Custom Shape Divider -->
+        <div class="custom-shape-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 C150,90 350,120 600,120 C850,120 1050,90 1200,0 L1200,120 L0,120 Z" fill="var(--color-bg-white)"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="services_tag">الخدمات</span>
+                <h2 class="section-title lang-ar">رعاية متخصصة تناسب احتياجات ابتسامتك</h2>
+                <h2 class="section-title lang-en">Specialized Care Tailored for Your Smile</h2>
+                <p class="section-desc lang-ar">
+                    نحن فخورون بتقديم باقة متكاملة من علاجات وتجميل الأسنان بأعلى المعايير الصحية وبأيدي نخبة من أمهر الأطباء المتخصصين.
+                </p>
+                <p class="section-desc lang-en">
+                    We are proud to provide a comprehensive range of dental treatments and aesthetics at the highest healthcare standards, managed by skilled specialists.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <!-- Service 1: Cosmetic Dentistry -->
+                <div class="service-card spotlight-glow reveal-on-scroll">
+                    <h3 class="service-title lang-ar">تجميل الأسنان وهوليوود سمايل</h3>
+                    <h3 class="service-title lang-en">Cosmetic Dentistry & Hollywood Smile</h3>
+                    <p class="service-text lang-ar">الحصول على ابتسامة متناسقة وناصعة البياض باستخدام قشور الفينير واللومينير المصممة خصيصاً لتناسب تفاصيل وجهك.</p>
+                    <p class="service-text lang-en">Get a symmetrical and bright white smile using custom veneers and lumineers designed specifically to suit your facial features.</p>
+                    <a href="#booking" class="service-link" data-i18n="service_learn_more">احجز استشارة تجميلية ←</a>
+                </div>
+
+                <!-- Service 2: Dental Implants -->
+                <div class="service-card spotlight-glow reveal-on-scroll">
+                    <h3 class="service-title lang-ar">زراعة الأسنان الفورية</h3>
+                    <h3 class="service-title lang-en">Dental Implants</h3>
+                    <p class="service-text lang-ar">تعويض الأسنان المفقودة بأحدث تقنيات زراعة الأسنان بدون ألم واستعادة قوة ومظهر أسنانك الطبيعية بكفاءة عالية.</p>
+                    <p class="service-text lang-en">Replace missing teeth with painless state-of-the-art dental implants, restoring your natural teeth's strength and look efficiently.</p>
+                    <a href="#booking" class="service-link" data-i18n="service_learn_more">احجز استشارة زراعة ←</a>
+                </div>
+
+                <!-- Service 3: Orthodontics -->
+                <div class="service-card spotlight-glow reveal-on-scroll">
+                    <h3 class="service-title lang-ar">تقويم الأسنان (العادي والشفاف)</h3>
+                    <h3 class="service-title lang-en">Orthodontics (Braces & Aligners)</h3>
+                    <p class="service-text lang-ar">تعديل اصطفاف الأسنان وعلاج عيوب الإطباق باستخدام التقويم المعدني أو التقويم الشفاف غير المرئي المريح والجمالي.</p>
+                    <p class="service-text lang-en">Align your teeth and treat bite issues with traditional braces or comfortable, virtually invisible clear aligners.</p>
+                    <a href="#booking" class="service-link" data-i18n="service_learn_more">احجز استشارة تقويم ←</a>
+                </div>
+
+                <!-- Service 4: Teeth Whitening -->
+                <div class="service-card spotlight-glow reveal-on-scroll">
+                    <h3 class="service-title lang-ar">تبييض الأسنان بالليزر</h3>
+                    <h3 class="service-title lang-en">Teeth Whitening</h3>
+                    <p class="service-text lang-ar">تفتيح لون الأسنان لعدة درجات وإزالة التصبغات العميقة الناتجة عن التدخين أو القهوة في جلسة واحدة آمنة وسريعة.</p>
+                    <p class="service-text lang-en">Lighten your teeth by several shades and eliminate deep stains from coffee or smoking in a single safe and quick session.</p>
+                    <a href="#booking" class="service-link" data-i18n="service_learn_more">احجز جلسة تبييض ←</a>
+                </div>
+
+                <!-- Service 5: Pediatric Dentistry -->
+                <div class="service-card spotlight-glow reveal-on-scroll">
+                    <h3 class="service-title lang-ar">طب أسنان الأطفال</h3>
+                    <h3 class="service-title lang-en">Pediatric Dentistry</h3>
+                    <p class="service-text lang-ar">بيئة صديقة ومحببة للأطفال لتقديم رعاية وقائية وعلاجات تسوس الأسنان بدون خوف، وتهيئة طفلك لابتسامة مستقبلية سليمة.</p>
+                    <p class="service-text lang-en">A friendly, stress-free environment for kids providing preventive care and decay treatment, preparing your child for a healthy smile.</p>
+                    <a href="#booking" class="service-link" data-i18n="service_learn_more">احجز موعد لطفلك ←</a>
+                </div>
+
+                <!-- Service 6: Root Canal & Endodontics -->
+                <div class="service-card spotlight-glow reveal-on-scroll">
+                    <h3 class="service-title lang-ar">علاج الجذور والعصب</h3>
+                    <h3 class="service-title lang-en">Root Canal & Endodontics</h3>
+                    <p class="service-text lang-ar">تنظيف وحشو القنوات العصبية الملتهبة بدقة متناهية وتحت التخدير الموضعي الفعال لإنقاذ أسنانك الطبيعية والتخلص من الآلام تماماً.</p>
+                    <p class="service-text lang-en">Thorough cleaning and filling of infected root canals using highly effective local anesthesia to save your natural teeth and relieve pain.</p>
+                    <a href="#booking" class="service-link" data-i18n="service_learn_more">احجز علاج عصب ←</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glow Divider -->
+    <div class="section-glow-divider"></div>
+
+    <!-- Before/After Smile Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="gallery_tag">ابتساماتنا</span>
+                <h2 class="section-title lang-ar">شاهد الفرق: تحول الابتسامات في عيادتنا</h2>
+                <h2 class="section-title lang-en">Witness the Change: Smile Transformations</h2>
+                <p class="section-desc lang-ar">
+                    اسحب الشريط المنزلق في المنتصف لترى كيف استطاع أطباؤنا تغيير حياة وثقة مرضانا بفضل خطط العلاج التجميلي المصممة بعناية.
+                </p>
+                <p class="section-desc lang-en">
+                    Drag the slider handle in the center to see how our dental specialists transformed patients' lives and smiles using customized cosmetic solutions.
+                </p>
+            </div>
+
+            <!-- Interactive Before/After Slider Component -->
+            <div class="slider-wrapper reveal-on-scroll">
+                <div class="before-after-slider" id="beforeAfterSlider">
+                    <!-- Before Image (Background/Underneath) -->
+                    <div class="image-container before-image">
+                        <img src="before.png" alt="Before Smile - Teeth Whitening & Veneers" class="slider-img">
+                        <span class="slider-label before-label">BEFORE | قبل</span>
+                    </div>
+                    
+                    <!-- After Image (On Top/Resizable) -->
+                    <div class="image-container after-image" id="afterImageContainer">
+                        <img src="after.png" alt="After Smile - Hollywood Smile Veneers" class="slider-img">
+                        <span class="slider-label after-label">AFTER | بعد</span>
+                    </div>
+
+                    <!-- Draggable Handle Bar -->
+                    <div class="slider-handle" id="sliderHandle">
+                        <div class="handle-button">
+                            <span>↔</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Bottom CTA -->
+            <div class="gallery-cta">
+                <span class="lang-ar">هل ترغب في الحصول على نتائج مماثلة؟ استشر أطباءنا</span>
+                <span class="lang-en">Do you want to achieve similar results? Consult our doctors</span>
+                <a href="#booking" class="btn btn-gold btn-sm" data-i18n="gallery_btn_consult">حجز استشارة تجميلية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glow Divider -->
+    <div class="section-glow-divider"></div>
+
+    <!-- Doctors Section -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="doctors_tag">أطباؤنا</span>
+                <h2 class="section-title lang-ar">نخبة من أمهر الأطباء والاستشاريين لخدمتكم</h2>
+                <h2 class="section-title lang-en">Our Elite Team of Dental Specialists</h2>
+                <p class="section-desc lang-ar">
+                    يضم مركز "اضحك" نخبة من الأخصائيين والاستشاريين الملتزمين بتقديم أعلى مستويات الرعاية والراحة لكل مريض.
+                </p>
+                <p class="section-desc lang-en">
+                    EDHAK Center features an elite team of specialists and consultants dedicated to providing the highest standards of care and comfort.
+                </p>
+            </div>
+
+            <!-- Doctors Slider Outer Container -->
+            <div class="doctors-slider-container reveal-on-scroll">
+                <!-- Slider Nav Arrows (Prev) -->
+                <button type="button" class="slider-nav-btn prev" id="docPrevBtn" aria-label="Previous Slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="doctors-slider-viewport">
+                    <div class="doctors-slider-track" id="doctorsSliderTrack">
+                        <!-- Doctor 1: Dr. Mohamed Moosa (Founder Highlight) -->
+                        <div class="doctor-card founder-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_mohamed.png" alt="Dr. Mohamed Moosa" class="doctor-img">
+                                <div class="doctor-glow-overlay"></div>
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">مؤسس المركز والمشرف العام</span>
+                                <span class="doctor-role lang-en">Founder & General Supervisor</span>
+                                <h3 class="doctor-name lang-ar">د. محمد موسى</h3>
+                                <h3 class="doctor-name lang-en">Dr. Mohamed Moosa</h3>
+                                <p class="doctor-bio lang-ar">
+                                    استشاري طب وتجميل وزراعة الأسنان، بخبرة تزيد عن 15 عاماً في زراعة الأسنان الفورية وتصميم الابتسامة التجميلية (هوليوود سمايل). يحرص على تقديم أحدث التقنيات لضمان الجودة والراحة التامة.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Consultant of Dental Cosmetics & Implants, with over 15 years of experience in immediate implants and Hollywood Smile designs. Dedicated to using state-of-the-art tech for comfort and quality.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد بالعيادة: <span class="schedule-val">كل يوم ماعدا الأحد</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Clinical Schedule: <span class="schedule-val">Daily except Sunday</span></div>
+                                </div>
+                                <a href="#booking" class="btn btn-gold btn-sm lang-ar" style="margin-top: 15px; align-self: flex-start;">احجز موعد كشف معه</a>
+                                <a href="#booking" class="btn btn-gold btn-sm lang-en" style="margin-top: 15px; align-self: flex-start;">Book Consultation</a>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 2: Dr. Sarah Hamdy -->
+                        <div class="doctor-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_sarah.png" alt="Dr. Sarah Hamdy" class="doctor-img">
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">أخصائية تركيبات الأسنان الثابتة</span>
+                                <span class="doctor-role lang-en">Fixed Prosthodontics Specialist</span>
+                                <h3 class="doctor-name lang-ar">د. سارة حمدي</h3>
+                                <h3 class="doctor-name lang-en">Dr. Sarah Hamdy</h3>
+                                <p class="doctor-bio lang-ar">
+                                    متخصصة في تركيبات الأسنان الثابتة، القشور الخزفية (الفينيرز)، وتصميم الابتسامة الرقمي لتعويض وتجميل الأسنان بأعلى دقة.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Specializes in fixed prosthodontics, ceramic veneers, and digital smile design to restore and beautify teeth with high precision.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد: <span class="schedule-val">السبت • الاثنين • الأربعاء • الخميس</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Schedule: <span class="schedule-val">Sat • Mon • Wed • Thu</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 3: Dr. Mostafa El-Refaey -->
+                        <div class="doctor-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_mostafa.png" alt="Dr. Mostafa El-Refaey" class="doctor-img">
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">أخصائي الحشوات التجميلية</span>
+                                <span class="doctor-role lang-en">Cosmetic Fillings Specialist</span>
+                                <h3 class="doctor-name lang-ar">د. مصطفى الرفاعي</h3>
+                                <h3 class="doctor-name lang-en">Dr. Mostafa El-Refaey</h3>
+                                <p class="doctor-bio lang-ar">
+                                    متخصص في الحشوات التجميلية المتقدمة وإعادة بناء الأسنان التالفة بدون ألم مع الحفاظ على البنية الطبيعية للسن.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Specializes in advanced cosmetic composite fillings and painless tooth reconstruction while preserving natural tooth structure.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد: <span class="schedule-val">الأحد • الثلاثاء • الخميس</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Schedule: <span class="schedule-val">Sun • Tue • Thu</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 4: Dr. Abdullah Fathy -->
+                        <div class="doctor-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_abdullah.png" alt="Dr. Abdullah Fathy" class="doctor-img">
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">أخصائي طب وجراحة الفم والأسنان</span>
+                                <span class="doctor-role lang-en">General Dentist & Oral Surgery</span>
+                                <h3 class="doctor-name lang-ar">د. عبدالله فتحي</h3>
+                                <h3 class="doctor-name lang-en">Dr. Abdullah Fathy</h3>
+                                <p class="doctor-bio lang-ar">
+                                    متخصص في جراحات الفم البسيطة، خلع ضرس العقل المدفون، وتقديم علاجات الأسنان العامة والوقائية بدقة متناهية.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Specializes in minor oral surgeries, impacted wisdom teeth extractions, and providing general and preventive dental care.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد: <span class="schedule-val">السبت • الاثنين • الأربعاء</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Schedule: <span class="schedule-val">Sat • Mon • Wed</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 5: Dr. Mohamed Mansour -->
+                        <div class="doctor-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_mansour.png" alt="Dr. Mohamed Mansour" class="doctor-img">
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">أخصائي علاج الجذور وحشو العصب</span>
+                                <span class="doctor-role lang-en">Endodontics Specialist</span>
+                                <h3 class="doctor-name lang-ar">د. محمد منصور</h3>
+                                <h3 class="doctor-name lang-en">Dr. Mohamed Mansour</h3>
+                                <p class="doctor-bio lang-ar">
+                                    خبير في علاج وجراحة عصب الأسنان بأحدث أجهزة الروتاري والميكروسكوب لضمان علاج جذور ناجح ومن دون ألم في جلسة واحدة.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Expert in root canal therapies and endodontic treatments using modern rotary and microscopic tools, ensuring painless success in a single session.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد: <span class="schedule-val">الأحد • الخميس</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Schedule: <span class="schedule-val">Sun • Thu</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 6: Dr. Ahmed El-Derini -->
+                        <div class="doctor-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_derini.png" alt="Dr. Ahmed El-Derini" class="doctor-img">
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">أخصائي طب أسنان الأطفال</span>
+                                <span class="doctor-role lang-en">Pediatric Dentistry Specialist</span>
+                                <h3 class="doctor-name lang-ar">د. أحمد الدريني</h3>
+                                <h3 class="doctor-name lang-en">Dr. Ahmed El-Derini</h3>
+                                <p class="doctor-bio lang-ar">
+                                    خبير في علاج أسنان الأطفال ومتابعة نمو فكهم في بيئة مبهجة وخالية من الخوف، لتأسيس علاقة إيجابية للطفل مع طبيب الأسنان.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Expert in treating children and monitoring jaw development in a cheerful, anxiety-free setting, fostering a positive relationship with dental visits.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد: <span class="schedule-val">السبت • الأحد</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Schedule: <span class="schedule-val">Sat • Sun</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 7: Dr. Mohamed Zidan -->
+                        <div class="doctor-card spotlight-glow">
+                            <div class="doctor-img-wrapper">
+                                <img src="doctor_zidan.png" alt="Dr. Mohamed Zidan" class="doctor-img">
+                            </div>
+                            <div class="doctor-info">
+                                <span class="doctor-role lang-ar">أخصائي التقويم والتقويم الشفاف</span>
+                                <span class="doctor-role lang-en">Orthodontics Specialist</span>
+                                <h3 class="doctor-name lang-ar">د. محمد زيدان</h3>
+                                <h3 class="doctor-name lang-en">Dr. Mohamed Zidan</h3>
+                                <p class="doctor-bio lang-ar">
+                                    متخصص في تركيب تقويم الأسنان المعدني والشفاف (الإنفزلاين) للأطفال والبالغين وتعديل انحرافات الفك والأسنان بجمالية تامة.
+                                </p>
+                                <p class="doctor-bio lang-en">
+                                    Specializes in metal and clear orthodontic braces (Invisalign) for kids and adults, resolving tooth and jaw misalignments.
+                                </p>
+                                <div class="doctor-schedule">
+                                    <div class="schedule-lbl lang-ar">📅 المواعيد: <span class="schedule-val">بحجز مسبق (تنسيق المواعيد)</span></div>
+                                    <div class="schedule-lbl lang-en">📅 Schedule: <span class="schedule-val">By Appointment</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Nav Arrows (Next) -->
+                <button type="button" class="slider-nav-btn next" id="docNextBtn" aria-label="Next Slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Slider Pagination Dots -->
+            <div class="slider-dots" id="doctorsSliderDots"></div>
+        </div>
+        <!-- Custom Shape Divider -->
+        <div class="custom-shape-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 C150,90 350,120 600,120 C850,120 1050,90 1200,0 L1200,120 L0,120 Z" fill="var(--color-bg-white)"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Branches & Contact Section -->
+    <section class="branches-section" id="branches">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="branches_tag">الفروع</span>
+                <h2 class="section-title lang-ar">تفضل بزيارتنا في أقرب فرع لك</h2>
+                <h2 class="section-title lang-en">Visit Us at Your Nearest Branch</h2>
+                <p class="section-desc lang-ar">
+                    عيادة "اضحك" متواجدة لخدمتكم وتوفير سبل الراحة من خلال فرعين مجهزين بالكامل بأحدث الأجهزة الطبية في بنها والقاهرة.
+                </p>
+                <p class="section-desc lang-en">
+                    EDHAK clinic is available to serve you in two branches fully equipped with the latest dental technology in Banha and Cairo.
+                </p>
+            </div>
+
+            <div class="branches-wrapper">
+                <!-- Branches Cards Column -->
+                <div class="branches-list reveal-on-scroll reveal-left">
+                    <!-- Branch Tab Toggle Switcher -->
+                    <div class="branch-toggle-bar">
+                        <button type="button" class="branch-toggle-btn active" data-branch="banha">
+                            <span class="lang-ar">فرع بنها</span>
+                            <span class="lang-en">Banha Branch</span>
+                        </button>
+                        <button type="button" class="branch-toggle-btn" data-branch="heliopolis">
+                            <span class="lang-ar">فرع مصر الجديدة</span>
+                            <span class="lang-en">Heliopolis Branch</span>
+                        </button>
+                    </div>
+
+                    <!-- Branch 1: Banha -->
+                    <div class="branch-card active spotlight-glow" data-map="banha" id="branchCardBanha">
+                        <div class="branch-status-badge open" data-i18n="branch_status_open">مفتوح الآن</div>
+                        <h3 class="branch-name lang-ar">فرع بنها (الفلل)</h3>
+                        <h3 class="branch-name lang-en">Banha Branch (El-Villas)</h3>
+                        
+                        <div class="branch-info-item">
+                            <span class="icon">📍</span>
+                            <span class="text lang-ar">163 شارع 6 متفرع من شارع الكورنيش، بجوار كافيه مكاني، منطقة الفلل، بنها، القليوبية</span>
+                            <span class="text lang-en">163 6th St., off Corniche Rd., next to Makani Cafe, El-Villas, Banha, Qalyubia</span>
+                        </div>
+                        
+                        <div class="branch-info-item">
+                            <span class="icon">📞</span>
+                            <span class="text" dir="ltr">
+                                <a href="tel:0133212500" class="branch-phone">013 321 2500</a> | 
+                                <a href="tel:01022225000" class="branch-phone">0102 222 5000</a>
+                            </span>
+                        </div>
+                        
+                        <div class="branch-info-item">
+                            <span class="icon">⏰</span>
+                            <span class="text lang-ar">يومياً: 12:00 ظهراً - 10:00 مساءً (الجمعة مغلق)</span>
+                            <span class="text lang-en">Daily: 12:00 PM - 10:00 PM (Friday Closed)</span>
+                        </div>
+
+                        <div class="branch-buttons">
+                            <a href="https://wa.me/201022225000" target="_blank" class="btn btn-outline btn-whatsapp btn-sm">
+                                <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" /></svg>
+                                WhatsApp (بنها)
+                            </a>
+                            <button class="btn btn-primary btn-sm show-map-btn" data-branch="banha" data-i18n="btn_show_map">عرض الخريطة</button>
+                        </div>
+                    </div>
+
+                    <!-- Branch 2: Heliopolis -->
+                    <div class="branch-card spotlight-glow" data-map="heliopolis" id="branchCardHeliopolis">
+                        <div class="branch-status-badge open" data-i18n="branch_status_open">مفتوح الآن</div>
+                        <h3 class="branch-name lang-ar">فرع القاهرة - مصر الجديدة</h3>
+                        <h3 class="branch-name lang-en">Cairo Branch - Heliopolis</h3>
+                        <div class="branch-info-item">
+                            <span class="icon">📍</span>
+                            <span class="text lang-ar">74 شارع خليفة المأمون، مصر الجديدة، القاهرة (بجوار سوق العصر)</span>
+                            <span class="text lang-en">74 Khalifa El-Maamon St, Heliopolis, Cairo (Next to Souq El-Asr)</span>
+                        </div>
+                        
+                        <div class="branch-info-item">
+                            <span class="icon">📞</span>
+                            <span class="text" dir="ltr">
+                                <a href="tel:0222900000" class="branch-phone">02 2290 0000</a> | 
+                                <a href="tel:01233334000" class="branch-phone">0123 333 4000</a>
+                            </span>
+                        </div>
+                        
+                        <div class="branch-info-item">
+                            <span class="icon">⏰</span>
+                            <span class="text lang-ar">يومياً: 1:00 ظهراً - 9:00 مساءً (الأحد مغلق)</span>
+                            <span class="text lang-en">Daily: 1:00 PM - 9:00 PM (Sunday Closed)</span>
+                        </div>
+
+                        <div class="branch-buttons">
+                            <a href="https://wa.me/201233334000" target="_blank" class="btn btn-outline btn-whatsapp btn-sm">
+                                <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" /></svg>
+                                WhatsApp (مصر الجديدة)
+                            </a>
+                            <button class="btn btn-primary btn-sm show-map-btn" data-branch="heliopolis" data-i18n="btn_show_map">عرض الخريطة</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Container Column -->
+                <div class="map-container-wrapper reveal-on-scroll reveal-right">
+                    <!-- Easy map selector tabs directly on the map container -->
+                    <div class="map-tabs">
+                        <button type="button" class="map-tab active" data-map-tab="banha">
+                            <span class="lang-ar">خريطة فرع بنها</span>
+                            <span class="lang-en">Banha Map</span>
+                        </button>
+                        <button type="button" class="map-tab" data-map-tab="heliopolis">
+                            <span class="lang-ar">خريطة فرع مصر الجديدة</span>
+                            <span class="lang-en">Heliopolis Map</span>
+                        </button>
+                    </div>
+                    <div class="map-inner">
+                        <!-- Google Map Iframe -->
+                        <iframe 
+                            id="googleMapIframe"
+                            src="https://maps.google.com/maps?q=30.474807,31.18183&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 320px;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Edhak Dental Clinic Location">
+                        </iframe>
+                    </div>
+                    <!-- Map Navigation Footer -->
+                    <div class="map-navigation-footer">
+                        <a href="https://maps.google.com/?q=Edhak+Dental+Clinic+Banha" target="_blank" id="getDirectionsBtn" class="btn btn-gold btn-sm">
+                            🧭 <span class="lang-ar">احصل على اتجاهات GPS</span><span class="lang-en">Get GPS Directions</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glow Divider -->
+    <div class="section-glow-divider"></div>
+
+    <!-- Booking Wizard Section -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="booking_tag">احجز الآن</span>
+                <h2 class="section-title lang-ar">احجز موعدك الآن بسهولة وسرعة</h2>
+                <h2 class="section-title lang-en">Book Your Appointment Easily &amp; Quickly</h2>
+                <p class="section-desc lang-ar">
+                    يمكنك حجز موعدك المبدئي إلكترونياً بسهولة تامة، وسيتواصل معك مسؤول الاستقبال لتأكيد الحجز النهائي.
+                </p>
+                <p class="section-desc lang-en">
+                    Book your tentative appointment online easily and instantly. Our receptionist will contact you to finalize.
+                </p>
+            </div>
+
+            <div class="booking-wizard-card reveal-on-scroll">
+                <!-- Step Contents -->
+                <form id="bookingForm" class="wizard-form">
+                    <div class="booking-unified-grid">
+                        <!-- Left Column: Date & Available Slots -->
+                        <div class="booking-grid-col calendar-slots-col">
+                            <div class="form-group">
+                                <label class="form-label lang-ar">التاريخ المفضل <span class="required">*</span></label>
+                                <label class="form-label lang-en">Preferred Date <span class="required">*</span></label>
+                                <input type="hidden" id="bookingDate" name="bookingDate" required>
+                                <div class="smart-calendar-wrapper">
+                                    <div class="smart-calendar-header">
+                                        <button type="button" class="cal-btn prev-btn" id="calPrevBtn">&larr;</button>
+                                        <span class="cal-month-year" id="calMonthYear"></span>
+                                        <button type="button" class="cal-btn next-btn" id="calNextBtn">&rarr;</button>
+                                    </div>
+                                    <div class="smart-calendar-weekdays" id="calWeekdays"></div>
+                                    <div class="smart-calendar-days" id="calDays"></div>
+                                </div>
+                                <div class="date-helper-text lang-ar">العيادة تغلق يوم الجمعة في فرع بنها، ويوم الأحد في فرع مصر الجديدة.</div>
+                                <div class="date-helper-text lang-en">Closed on Fridays in Banha & Sundays in Heliopolis.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label lang-ar">الأوقات المتاحة لهذا اليوم <span class="required">*</span></label>
+                                <label class="form-label lang-en">Available Slots for this Date <span class="required">*</span></label>
+                                <div class="time-slots-grid" id="timeSlotsGrid">
+                                    <span class="no-slots-msg lang-ar">يرجى تحديد التاريخ أولاً لعرض الأوقات المتاحة.</span>
+                                    <span class="no-slots-msg lang-en">Please select a date first to display available slots.</span>
+                                </div>
+                                <input type="hidden" id="selectedTimeSlot" name="selectedTimeSlot" required>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Clinic, Treatment & Patient Details -->
+                        <div class="booking-grid-col details-form-col">
+                            <div class="form-group">
+                                <label class="form-label lang-ar">العيادة / الفرع <span class="required">*</span></label>
+                                <label class="form-label lang-en">Clinic / Branch <span class="required">*</span></label>
+                                <div class="branch-selector-grid">
+                                    <label class="branch-option-card checked">
+                                        <input type="radio" name="bookingBranch" value="banha" checked>
+                                        <div class="option-card-content">
+                                            <span class="title lang-ar">فرع بنها</span>
+                                            <span class="title lang-en">Banha Branch</span>
+                                            <span class="subtitle lang-ar">منطقة الفلل، القليوبية</span>
+                                            <span class="subtitle lang-en">El-Villas, Qalyubia</span>
+                                        </div>
+                                    </label>
+                                    <label class="branch-option-card">
+                                        <input type="radio" name="bookingBranch" value="heliopolis">
+                                        <div class="option-card-content">
+                                            <span class="title lang-ar">فرع مصر الجديدة (القاهرة)</span>
+                                            <span class="title lang-en">Heliopolis (Cairo)</span>
+                                            <span class="subtitle lang-ar">شارع خليفة المأمون</span>
+                                            <span class="subtitle lang-en">Khalifa El-Maamon St</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingService" class="form-label lang-ar">الخدمة المطلوبة <span class="required">*</span></label>
+                                <label for="bookingService" class="form-label lang-en">Required Treatment <span class="required">*</span></label>
+                                <select id="bookingService" name="bookingService" class="form-select" required>
+                                    <option value="" class="lang-ar">اختر نوع الخدمة...</option>
+                                    <option value="" class="lang-en">Select service type...</option>
+                                    <option value="cosmetics" class="lang-ar">تجميل الأسنان وهوليوود سمايل</option>
+                                    <option value="cosmetics" class="lang-en">Cosmetic Dentistry & Hollywood Smile</option>
+                                    <option value="implants" class="lang-ar">زراعة الأسنان</option>
+                                    <option value="implants" class="lang-en">Dental Implants</option>
+                                    <option value="ortho" class="lang-ar">تقويم الأسنان</option>
+                                    <option value="ortho" class="lang-en">Orthodontics (Braces/Aligners)</option>
+                                    <option value="whitening" class="lang-ar">تبييض الأسنان بالليزر</option>
+                                    <option value="whitening" class="lang-en">Teeth Whitening</option>
+                                    <option value="pediatric" class="lang-ar">طب أسنان الأطفال</option>
+                                    <option value="pediatric" class="lang-en">Pediatric Dentistry</option>
+                                    <option value="rootcanal" class="lang-ar">علاج الجذور والعصب</option>
+                                    <option value="rootcanal" class="lang-en">Root Canal & Endodontics</option>
+                                    <option value="general" class="lang-ar">كشف واستشارة عامة</option>
+                                    <option value="general" class="lang-en">General Checkup & Consultation</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patientName" class="form-label lang-ar">الاسم الكامل <span class="required">*</span></label>
+                                <label for="patientName" class="form-label lang-en">Full Name <span class="required">*</span></label>
+                                <input type="text" id="patientName" name="patientName" class="form-input" placeholder="الاسم ثلاثي" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patientPhone" class="form-label lang-ar">رقم الهاتف (الواتساب) <span class="required">*</span></label>
+                                <label for="patientPhone" class="form-label lang-en">Phone Number (WhatsApp) <span class="required">*</span></label>
+                                <input type="tel" id="patientPhone" name="patientPhone" class="form-input" placeholder="01xxxxxxxxx" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patientNotes" class="form-label lang-ar">ملاحظات أو شكاوى (اختياري)</label>
+                                <label for="patientNotes" class="form-label lang-en">Notes or Symptoms (Optional)</label>
+                                <textarea id="patientNotes" name="patientNotes" class="form-textarea" placeholder="مثال: ألم شديد في الضرس" style="height: 80px; resize: none;"></textarea>
+                            </div>
+
+                            <div class="booking-submit-wrapper" style="margin-top: 20px;">
+                                <button type="submit" class="btn btn-primary btn-submit-booking" style="width: 100%; font-size: 1.1rem; padding: 14px 28px;">
+                                    <span class="lang-ar">تأكيد الحجز المبدئي للموعد</span>
+                                    <span class="lang-en">Confirm Appointment Book</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- STEP 5: Success Content (Hidden by default) -->
+                <div class="wizard-success-content" id="wizardSuccess">
+                    <div class="success-icon-wrapper">
+                        <div class="success-checkmark">✓</div>
+                    </div>
+                    <h3 class="success-title lang-ar">تم تسجيل طلب الحجز بنجاح!</h3>
+                    <h3 class="success-title lang-en">Reservation Requested Successfully!</h3>
+                    <p class="success-msg lang-ar">لقد تم حجز موعدك المبدئي. سيقوم مسؤول الاستقبال في الفرع المختار بالاتصال بك هاتفياً أو عبر الواتساب خلال ساعة واحدة لتأكيد الحجز النهائي.</p>
+                    <p class="success-msg lang-en">Your tentative slot is reserved. Our receptionist in the chosen branch will contact you via phone or WhatsApp within an hour for final confirmation.</p>
+                    
+                    <!-- Digital Card Summary -->
+                    <div class="digital-ticket-card" id="digitalTicket">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="success-buttons">
+                        <a href="#" id="shareWhatsappBtn" target="_blank" class="btn btn-primary btn-whatsapp">
+                            <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" /></svg>
+                            <span class="lang-ar">إرسال تأكيد عبر WhatsApp</span>
+                            <span class="lang-en">Send WhatsApp Confirmation</span>
+                        </a>
+                        <button type="button" class="btn btn-outline" id="resetWizardBtn" data-i18n="btn_book_another">حجز موعد جديد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Custom Shape Divider -->
+        <div class="custom-shape-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 C150,90 350,120 600,120 C850,120 1050,90 1200,0 L1200,120 L0,120 Z" fill="var(--color-bg-white)"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="faq_tag">الأسئلة</span>
+                <h2 class="section-title lang-ar">معلومات وإجابات تهمك قبل زيارتنا</h2>
+                <h2 class="section-title lang-en">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-accordion-wrapper">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item reveal-on-scroll">
+                    <button class="faq-question">
+                        <span class="question-text lang-ar">هل علاج وزراعة الأسنان في المركز يتم بدون ألم؟</span>
+                        <span class="question-text lang-en">Is dental treatment and implantation painless at the clinic?</span>
+                        <span class="accordion-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="lang-ar">نعم، نحرص في مركز "اضحك" على استخدام أحدث أجهزة التخدير الموضعي وتقنيات الزراعة اللامائية الحديثة، مما يضمن خوض تجربة علاجية مريحة وخالية تماماً من الألم أو التوتر.</p>
+                        <p class="lang-en">Yes, at EDHAK Center we utilize advanced local anesthesia equipment and modern waterless implant techniques, ensuring a comfortable, pain-free, and stress-free treatment experience.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item reveal-on-scroll">
+                    <button class="faq-question">
+                        <span class="question-text lang-ar">ما هو الفرق بين تقويم الأسنان العادي والتقويم الشفاف؟</span>
+                        <span class="question-text lang-en">What is the difference between traditional braces and clear aligners?</span>
+                        <span class="accordion-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="lang-ar">التقويم العادي (المعدني) يتكون من حواصر وأسلاك تثبت على الأسنان طوال فترة العلاج. أما التقويم الشفاف (Aligners) فهو عبارة عن قوالب بلاستيكية طبية شفافة غير مرئية وقابلة للإزالة أثناء تناول الطعام وتنظيف الأسنان، مما يجعله أكثر راحة وجمالاً.</p>
+                        <p class="lang-en">Traditional metal braces consist of brackets and wires fixed to teeth throughout treatment. Clear aligners, however, are medical-grade transparent plastic trays that are invisible and removable while eating or brushing, offering greater aesthetics and comfort.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item reveal-on-scroll">
+                    <button class="faq-question">
+                        <span class="question-text lang-ar">كم تبلغ تكلفة ابتسامة هوليوود (الفينير) بالمركز؟</span>
+                        <span class="question-text lang-en">How much does Hollywood Smile (Veneers) cost at the clinic?</span>
+                        <span class="accordion-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="lang-ar">تختلف تكلفة الفينير بناءً على خامة العدسات المستخدمة (إيماكس، زيركون) وعدد الأسنان التي سيتم تجميلها. نحن نوفر باقات عروض وخطط دفع مرنة. يمكنك حجز استشارة تجميلية ليقوم الدكتور بفحص حالتك وتقديم كشف أسعار تفصيلي.</p>
+                        <p class="lang-en">The cost of veneers varies depending on the materials used (E-max, Zirconia) and the number of teeth to be treated. We offer flexible payment plans and packages. You can book a consultation to receive a custom treatment plan and pricing.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item reveal-on-scroll">
+                    <button class="faq-question">
+                        <span class="question-text lang-ar">ما هي مواعيد العمل الرسمية للفرعين؟</span>
+                        <span class="question-text lang-en">What are the official working hours for both branches?</span>
+                        <span class="accordion-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="lang-ar">
+                            <strong>فرع بنها:</strong> يومياً من 12:00 ظهراً حتى 10:00 مساءً (الجمعة مغلق).<br>
+                            <strong>فرع مصر الجديدة:</strong> يومياً من 1:00 ظهراً حتى 9:00 مساءً (الأحد مغلق).
+                        </p>
+                        <p class="lang-en">
+                            <strong>Banha Branch:</strong> Daily from 12:00 PM to 10:00 PM (Friday Closed).<br>
+                            <strong>Heliopolis Branch:</strong> Daily from 1:00 PM to 9:00 PM (Sunday Closed).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glow Divider -->
+    <div class="section-glow-divider"></div>
+
+    <!-- Testimonials Slider Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tag" data-i18n="testimonials_tag">آراء مراجعينا</span>
+                <h2 class="section-title lang-ar">ابتسامات تتحدث عن تميزنا</h2>
+                <h2 class="section-title lang-en">Smiles Speaking of Our Excellence</h2>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card spotlight-glow reveal-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-quote lang-ar">"تجربتي في فرع بنها كانت ممتازة جداً. قمت بزراعة ضرسين، وبصراحة لم أشعر بأي ألم يذكر أثناء العملية، والمعاملة من الطاقم الطبي قمة في الرقي والاحترافية. أنصح بهم بشدة."</p>
+                    <p class="testimonial-quote lang-en">"My experience in Banha branch was outstanding. I had two dental implants done, and honestly felt zero pain. The treatment from the clinical staff was highly professional. Highly recommended!"</p>
+                    <div class="patient-profile">
+                        <div class="patient-avatar">أ.ح</div>
+                        <div class="patient-meta">
+                            <h4 class="patient-name lang-ar">أحمد حسام</h4>
+                            <h4 class="patient-name lang-en">Ahmed Hosam</h4>
+                            <span class="treatment-tag lang-ar">مريض زراعة أسنان (بنها)</span>
+                            <span class="treatment-tag lang-en">Implant Patient (Banha)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card spotlight-glow reveal-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-quote lang-ar">"ركبت تقويم شفاف بالمركز في فرع مصر الجديدة مع الدكتور محمد موسى والنتيجة أكثر من رائعة. دقة في المواعيد وخطوات علاجية واضحة جداً. شكراً لكل فريق اضحك."</p>
+                    <p class="testimonial-quote lang-en">"I got clear aligners at the Heliopolis branch with Dr. Mohamed. The results are amazing. Punctual appointments and very clear treatment steps. Thank you to the EDHAK team!"</p>
+                    <div class="patient-profile">
+                        <div class="patient-avatar">س.م</div>
+                        <div class="patient-meta">
+                            <h4 class="patient-name lang-ar">سارة محمود</h4>
+                            <h4 class="patient-name lang-en">Sara Mahmoud</h4>
+                            <span class="treatment-tag lang-ar">مريضة تقويم أسنان (مصر الجديدة)</span>
+                            <span class="treatment-tag lang-en">Orthodontic Patient (Heliopolis)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card spotlight-glow reveal-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-quote lang-ar">"أفضل عيادة أسنان تعاملت معها على الإطلاق. اهتمام شديد بالنظافة والتعقيم، والأجهزة الطبية حديثة جداً. قمت بتبييض أسناني وحصلت على نتيجة مبهرة في جلسة واحدة."</p>
+                    <p class="testimonial-quote lang-en">"The best dental clinic I have ever dealt with. Great attention to hygiene and sterilization, and the clinical equipment is state-of-the-art. Bleaching results were remarkable."</p>
+                    <div class="patient-profile">
+                        <div class="patient-avatar">م.ع</div>
+                        <div class="patient-meta">
+                            <h4 class="patient-name lang-ar">م. عمرو فاروق</h4>
+                            <h4 class="patient-name lang-en">Eng. Amr Farouk</h4>
+                            <span class="treatment-tag lang-ar">مريض تبييض أسنان</span>
+                            <span class="treatment-tag lang-en">Whitening Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glow Divider -->
+    <div class="section-glow-divider"></div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Footer Info Column -->
+            <div class="footer-col footer-info">
+                <a href="#" class="logo-container footer-logo">
+                    <img src="logo.png" alt="Edhak Logo" class="logo-image footer-logo-image">
+                </a>
+                <p class="footer-desc lang-ar">
+                    مركز متكامل يقدم أحدث علاجات وتجميل الأسنان في مصر، نسعى لتقديم خدمة طبية استثنائية ونضمن لكم رعاية صحية آمنة وابتسامة واثقة.
+                </p>
+                <p class="footer-desc lang-en">
+                    An integrated center providing latest dental treatments and cosmetics in Egypt, aiming for exceptional clinical service and ensuring safe healthcare.
+                </p>
+                <!-- Social media -->
+                <div class="social-links">
+                    <a href="https://www.facebook.com/edhakcenter" target="_blank" class="social-icon">
+                        <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/edhak_dr.moosa/" target="_blank" class="social-icon">
+                        <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        Instagram
+                    </a>
+                    <a href="https://wa.me/201022225000" target="_blank" class="social-icon">
+                        <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" /></svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Links Column -->
+            <div class="footer-col footer-links-col">
+                <h4 class="footer-title lang-ar">روابط سريعة</h4>
+                <h4 class="footer-title lang-en">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
+                    <li><a href="#gallery" data-i18n="nav_gallery">ابتساماتنا</a></li>
+                    <li><a href="#doctors" data-i18n="nav_doctors">أطباؤنا</a></li>
+                    <li><a href="#branches" data-i18n="nav_branches">الفروع</a></li>
+                    <li><a href="#booking" data-i18n="nav_booking_nav">احجز الآن</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Contacts Column -->
+            <div class="footer-col footer-contacts">
+                <h4 class="footer-title lang-ar">اتصل بنا</h4>
+                <h4 class="footer-title lang-en">Contact Us</h4>
+                <ul class="footer-links font-sm">
+                    <li>
+                        <strong><span class="lang-ar">فرع بنها:</span><span class="lang-en">Banha Branch:</span></strong> 
+                        <br>📞 <span dir="ltr">013 321 2500 | 0102 222 5000</span>
+                    </li>
+                    <li>
+                        <strong><span class="lang-ar">فرع القاهرة:</span><span class="lang-en">Cairo Branch:</span></strong> 
+                        <br>📞 <span dir="ltr">02 2290 0000 | 0123 333 4000</span>
+                    </li>
+                    <li>
+                        <strong>📧 Email:</strong> <a href="mailto:edhakcenter@gmail.com" class="footer-email-link">edhakcenter@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright lang-ar">&copy; 2026 مركز اضحك لطب الأسنان. جميع الحقوق محفوظة.</p>
+                <p class="copyright lang-en">&copy; 2026 EDHAK Dental Center. All rights reserved.</p>
+                <p class="credits lang-ar">بإشراف د. محمد موسى</p>
+                <p class="credits lang-en">Supervised by Dr. Mohamed Moosa</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive AI Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <!-- Chat Bubble Trigger -->
+        <button class="chat-trigger-btn" id="chatTriggerBtn" aria-label="Open Chatbot">
+            <img src="logo_emblem.png" alt="Chat Bot Icon" class="chat-trigger-logo">
+            <span class="bubble-pulse"></span>
+            <span class="bubble-badge">1</span>
+        </button>
+
+        <!-- Chat Panel Window -->
+        <div class="chat-panel" id="chatPanel">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-bot-info">
+                    <h4 class="chat-bot-name lang-ar">مركز اضحك للأسنان</h4>
+                    <h4 class="chat-bot-name lang-en">EDHAK Dental</h4>
+                    <span class="chat-bot-status lang-ar">نشط الآن</span>
+                    <span class="chat-bot-status lang-en">Active now</span>
+                </div>
+                <button class="chat-close-btn" id="chatCloseBtn">&times;</button>
+            </div>
+
+            <!-- Messages Stream Area -->
+            <div class="chat-body" id="chatBody">
+                <!-- Greeting Message -->
+                <div class="chat-msg bot">
+                    <div class="msg-bubble lang-ar">
+                        مرحباً بك في مركز اضحك! 😊 كيف يمكنني مساعدتك اليوم؟
+                    </div>
+                    <div class="msg-bubble lang-en">
+                        Welcome to EDHAK Dental! 😊 How can I help you today?
+                    </div>
+                    <span class="msg-time">16:54</span>
+                </div>
+
+                <!-- Welcome Quick chips -->
+                <div class="chat-chips-container" id="chatChipsContainer">
+                    <button class="chat-chip" data-action="book" data-i18n="chip_book">📅 احجز موعداً</button>
+                    <button class="chat-chip" data-action="locations" data-i18n="chip_locations">📍 فروعنا وعناويننا</button>
+                    <button class="chat-chip" data-action="services" data-i18n="chip_services">🦷 خدماتنا الطبية</button>
+                    <button class="chat-chip" data-action="hours" data-i18n="chip_hours">⏰ مواعيد العمل</button>
+                </div>
+            </div>
+
+            <!-- Footer Message Input -->
+            <div class="chat-footer">
+                <input type="text" id="chatInput" class="chat-input-field lang-ar" placeholder="اكتب رسالتك هنا..." dir="rtl">
+                <input type="text" id="chatInputEn" class="chat-input-field lang-en" placeholder="Type your message here..." dir="ltr" style="display: none;">
+                <button class="chat-send-btn" id="chatSendBtn" aria-label="Send Message">
+                    <svg class="chat-send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Javascript Code -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
