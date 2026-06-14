@@ -469,24 +469,45 @@ resetWizardBtn.addEventListener('click', () => {
 });
 
 /* ==========================================================================
-   FAQ ACCORDION LOGIC
+   FAQ SPLIT VIDEO TABS LOGIC
    ========================================================================== */
-const faqQuestions = document.querySelectorAll('.faq-question');
+function initFAQVideoTabs() {
+    const tabItems = document.querySelectorAll('.faq-tab-item');
+    const videoPlayer = document.getElementById('faqVideoPlayer');
 
-faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-        const item = question.parentElement;
-        const isOpen = item.classList.contains('faq-open');
+    if (!tabItems.length || !videoPlayer) return;
 
-        // Close all items
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('faq-open'));
+    tabItems.forEach(item => {
+        const btn = item.querySelector('.faq-tab-btn');
+        if (!btn) return;
+        
+        btn.addEventListener('click', () => {
+            if (item.classList.contains('active')) return;
 
-        // Toggle clicked item
-        if (!isOpen) {
-            item.classList.add('faq-open');
-        }
+            // Remove active class from all items
+            tabItems.forEach(i => i.classList.remove('active'));
+
+            // Add active class to current item
+            item.classList.add('active');
+
+            // Switch the video source
+            const videoId = item.getAttribute('data-video-id');
+            if (videoId) {
+                videoPlayer.src = `https://www.instagram.com/reel/${videoId}/embed/`;
+            }
+
+            // Smooth scroll to video mockup on mobile/tablet
+            if (window.innerWidth <= 992) {
+                const videoPanel = document.querySelector('.faq-video-panel');
+                if (videoPanel) {
+                    videoPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
     });
-});
+}
+
+initFAQVideoTabs();
 
 /* ==========================================================================
    INTERACTIVE CHATBOT (EDHAK BOT) LOGIC

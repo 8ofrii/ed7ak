@@ -836,118 +836,107 @@
         </div>
     </section>
 
-    <!-- FAQ Accordion Section -->
-    <section class="faq-section">
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
         <div class="container">
             <div class="section-header reveal-on-scroll">
                 <span class="section-tag" data-i18n="faq_tag">الأسئلة</span>
-                <h2 class="section-title lang-ar">معلومات وإجابات تهمك قبل زيارتنا</h2>
-                <h2 class="section-title lang-en">Frequently Asked Questions</h2>
+                <h2 class="section-title lang-ar">شاهد إجابات لأسئلتك بالفيديو</h2>
+                <h2 class="section-title lang-en">Watch Video Answers to Your Questions</h2>
+                <p class="section-desc lang-ar">
+                    اختر أي سؤال لعرض الإجابة التفصيلية، مع معاينة فيديو مباشر من حسابنا على انستغرام.
+                </p>
+                <p class="section-desc lang-en">
+                    Select any question to read the answer and preview a live video explanation from our Instagram.
+                </p>
             </div>
 
-            <div class="faq-accordion-wrapper">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item reveal-on-scroll">
-                    <button class="faq-question">
-                        <span class="question-text lang-ar">هل علاج وزراعة الأسنان في المركز يتم بدون ألم؟</span>
-                        <span class="question-text lang-en">Is dental treatment and implantation painless at the clinic?</span>
-                        <span class="accordion-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-text">
-                                <p class="lang-ar">نعم، نحرص في مركز "اضحك" على استخدام أحدث أجهزة التخدير الموضعي وتقنيات الزراعة اللامائية الحديثة، مما يضمن خوض تجربة علاجية مريحة وخالية تماماً من الألم أو التوتر.</p>
-                                <p class="lang-en">Yes, at EDHAK Center we utilize advanced local anesthesia equipment and modern waterless implant techniques, ensuring a comfortable, pain-free, and stress-free treatment experience.</p>
-                            </div>
-                            <div class="faq-answer-video">
-                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
-                            </div>
+            <div class="faq-split-layout reveal-on-scroll">
+                <!-- Left: Premium Smartphone Device Video Player -->
+                <div class="faq-video-panel">
+                    <div class="phone-mockup-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <iframe id="faqVideoPlayer" src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
-                <div class="faq-item reveal-on-scroll">
-                    <button class="faq-question">
-                        <span class="question-text lang-ar">ما هو الفرق بين تقويم الأسنان العادي والتقويم الشفاف؟</span>
-                        <span class="question-text lang-en">What is the difference between traditional braces and clear aligners?</span>
-                        <span class="accordion-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-text">
-                                <p class="lang-ar">التقويم العادي (المعدني) يتكون من حواصر وأسلاك تثبت على الأسنان طوال فترة العلاج. أما التقويم الشفاف (Aligners) فهو عبارة عن قوالب بلاستيكية طبية شفافة غير مرئية وقابلة للإزالة أثناء تناول الطعام وتنظيف الأسنان، مما يجعله أكثر راحة وجمالاً.</p>
-                                <p class="lang-en">Traditional metal braces consist of brackets and wires fixed to teeth throughout treatment. Clear aligners, however, are medical-grade transparent plastic trays that are invisible and removable while eating or brushing, offering greater aesthetics and comfort.</p>
-                            </div>
-                            <div class="faq-answer-video">
-                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
-                            </div>
+                <!-- Right: Vertical FAQ Accordion/Tabs -->
+                <div class="faq-tabs-panel">
+                    <!-- Tab 1 -->
+                    <div class="faq-tab-item active" data-video-id="DZhqd0fO6Y5">
+                        <button class="faq-tab-btn">
+                            <span class="btn-num">01</span>
+                            <span class="btn-text lang-ar">هل علاج وزراعة الأسنان في المركز يتم بدون ألم؟</span>
+                            <span class="btn-text lang-en">Is dental treatment and implantation painless?</span>
+                            <span class="btn-arrow">›</span>
+                        </button>
+                        <div class="faq-tab-body">
+                            <p class="lang-ar">نعم، نحرص في مركز "اضحك" على استخدام أحدث أجهزة التخدير الموضعي وتقنيات الزراعة اللامائية الحديثة، مما يضمن خوض تجربة علاجية مريحة وخالية تماماً من الألم أو التوتر.</p>
+                            <p class="lang-en">Yes, at EDHAK Center we utilize advanced local anesthesia equipment and modern waterless implant techniques, ensuring a comfortable, pain-free, and stress-free treatment experience.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- FAQ Item 3 -->
-                <div class="faq-item reveal-on-scroll">
-                    <button class="faq-question">
-                        <span class="question-text lang-ar">كم تبلغ تكلفة ابتسامة هوليوود (الفينير) بالمركز؟</span>
-                        <span class="question-text lang-en">How much does Hollywood Smile (Veneers) cost at the clinic?</span>
-                        <span class="accordion-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-text">
-                                <p class="lang-ar">تختلف تكلفة الفينير بناءً على خامة العدسات المستخدمة (إيماكس، زيركون) وعدد الأسنان التي سيتم تجميلها. نحن نوفر باقات عروض وخطط دفع مرنة. يمكنك حجز استشارة تجميلية ليقوم الدكتور بفحص حالتك وتقديم كشف أسعار تفصيلي.</p>
-                                <p class="lang-en">The cost of veneers varies depending on the materials used (E-max, Zirconia) and the number of teeth to be treated. We offer flexible payment plans and packages. You can book a consultation to receive a custom treatment plan and pricing.</p>
-                            </div>
-                            <div class="faq-answer-video">
-                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
-                            </div>
+                    <!-- Tab 2 -->
+                    <div class="faq-tab-item" data-video-id="DZhqd0fO6Y5">
+                        <button class="faq-tab-btn">
+                            <span class="btn-num">02</span>
+                            <span class="btn-text lang-ar">ما هو الفرق بين تقويم الأسنان العادي والتقويم الشفاف؟</span>
+                            <span class="btn-text lang-en">What is the difference between traditional braces and clear aligners?</span>
+                            <span class="btn-arrow">›</span>
+                        </button>
+                        <div class="faq-tab-body">
+                            <p class="lang-ar">التقويم العادي (المعدني) يتكون من حواصر وأسلاك تثبت على الأسنان طوال فترة العلاج. أما التقويم الشفاف (Aligners) فهو عبارة عن قوالب بلاستيكية طبية شفافة غير مرئية وقابلة للإزالة أثناء تناول الطعام وتنظيف الأسنان، مما يجعله أكثر راحة وجمالاً.</p>
+                            <p class="lang-en">Traditional metal braces consist of brackets and wires fixed to teeth throughout treatment. Clear aligners, however, are medical-grade transparent plastic trays that are invisible and removable while eating or brushing, offering greater aesthetics and comfort.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- FAQ Item 4 -->
-                <div class="faq-item reveal-on-scroll">
-                    <button class="faq-question">
-                        <span class="question-text lang-ar">ازاي بنعمل تبييض الاسنان؟</span>
-                        <span class="question-text lang-en">How do we perform teeth whitening?</span>
-                        <span class="accordion-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-text">
-                                <p class="lang-ar">نقوم بتبييض الأسنان بالليزر باستخدام أحدث أجهزة "جلايد" العالمية والمواد الطبية الآمنة التي تحمي المينا وتمنحك درجة بياض طبيعية وجذابة خلال جلسة واحدة فقط.</p>
-                                <p class="lang-en">We perform laser teeth whitening using state-of-the-art international equipment and safe medical agents that protect your enamel, providing a natural, bright smile in just one session.</p>
-                            </div>
-                            <div class="faq-answer-video">
-                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
-                            </div>
+                    <!-- Tab 3 -->
+                    <div class="faq-tab-item" data-video-id="DZhqd0fO6Y5">
+                        <button class="faq-tab-btn">
+                            <span class="btn-num">03</span>
+                            <span class="btn-text lang-ar">كم تبلغ تكلفة ابتسامة هوليوود (الفينير) بالمركز؟</span>
+                            <span class="btn-text lang-en">How much does Hollywood Smile (Veneers) cost?</span>
+                            <span class="btn-arrow">›</span>
+                        </button>
+                        <div class="faq-tab-body">
+                            <p class="lang-ar">تختلف تكلفة الفينير بناءً على خامة العدسات المستخدمة (إيماكس، زيركون) وعدد الأسنان التي سيتم تجميلها. نحن نوفر باقات عروض وخطط دفع مرنة. يمكنك حجز استشارة تجميلية ليقوم الدكتور بفحص حالتك وتقديم كشف أسعار تفصيلي.</p>
+                            <p class="lang-en">The cost of veneers varies depending on the materials used (E-max, Zirconia) and the number of teeth to be treated. We offer flexible payment plans and packages. You can book a consultation to receive a custom treatment plan and pricing.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- FAQ Item 5 -->
-                <div class="faq-item reveal-on-scroll">
-                    <button class="faq-question">
-                        <span class="question-text lang-ar">ما هي مواعيد العمل الرسمية للفرعين؟</span>
-                        <span class="question-text lang-en">What are the official working hours for both branches?</span>
-                        <span class="accordion-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-text">
-                                <p class="lang-ar">
-                                    <strong>فرع بنها:</strong> يومياً من 12:00 ظهراً حتى 10:00 مساءً (الجمعة مغلق).<br>
-                                    <strong>فرع مصر الجديدة:</strong> يومياً من 1:00 ظهراً حتى 9:00 مساءً (الأحد مغلق).
-                                </p>
-                                <p class="lang-en">
-                                    <strong>Banha Branch:</strong> Daily from 12:00 PM to 10:00 PM (Friday Closed).<br>
-                                    <strong>Heliopolis Branch:</strong> Daily from 1:00 PM to 9:00 PM (Sunday Closed).
-                                </p>
-                            </div>
-                            <div class="faq-answer-video">
-                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
-                            </div>
+                    <!-- Tab 4 -->
+                    <div class="faq-tab-item" data-video-id="DZhqd0fO6Y5">
+                        <button class="faq-tab-btn">
+                            <span class="btn-num">04</span>
+                            <span class="btn-text lang-ar">ازاي بنعمل تبييض الاسنان؟</span>
+                            <span class="btn-text lang-en">How do we perform teeth whitening?</span>
+                            <span class="btn-arrow">›</span>
+                        </button>
+                        <div class="faq-tab-body">
+                            <p class="lang-ar">نقوم بتبييض الأسنان بالليزر باستخدام أحدث أجهزة "جلايد" العالمية والمواد الطبية الآمنة التي تحمي المينا وتمنحك درجة بياض طبيعية وجذابة خلال جلسة واحدة فقط.</p>
+                            <p class="lang-en">We perform laser teeth whitening using state-of-the-art international equipment and safe medical agents that protect your enamel, providing a natural, bright smile in just one session.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5 -->
+                    <div class="faq-tab-item" data-video-id="DZhqd0fO6Y5">
+                        <button class="faq-tab-btn">
+                            <span class="btn-num">05</span>
+                            <span class="btn-text lang-ar">ما هي مواعيد العمل الرسمية للفرعين؟</span>
+                            <span class="btn-text lang-en">What are the official working hours for both branches?</span>
+                            <span class="btn-arrow">›</span>
+                        </button>
+                        <div class="faq-tab-body">
+                            <p class="lang-ar">
+                                <strong>فرع بنها:</strong> يومياً من 12:00 ظهراً حتى 10:00 مساءً (الجمعة مغلق).<br>
+                                <strong>فرع مصر الجديدة:</strong> يومياً من 1:00 ظهراً حتى 9:00 مساءً (الأحد مغلق).
+                            </p>
+                            <p class="lang-en">
+                                <strong>Banha Branch:</strong> Daily from 12:00 PM to 10:00 PM (Friday Closed).<br>
+                                <strong>Heliopolis Branch:</strong> Daily from 1:00 PM to 9:00 PM (Sunday Closed).
+                            </p>
                         </div>
                     </div>
                 </div>
