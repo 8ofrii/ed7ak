@@ -474,8 +474,14 @@ resetWizardBtn.addEventListener('click', () => {
 function initFAQVideoTabs() {
     const tabItems = document.querySelectorAll('.faq-tab-item');
     const videoPlayer = document.getElementById('faqVideoPlayer');
+    const loadingOverlay = document.getElementById('phoneLoadingOverlay');
 
     if (!tabItems.length || !videoPlayer) return;
+
+    // Hide loading overlay once the initial iframe finishes loading
+    videoPlayer.addEventListener('load', () => {
+        if (loadingOverlay) loadingOverlay.classList.add('hidden');
+    });
 
     tabItems.forEach(item => {
         const btn = item.querySelector('.faq-tab-btn');
@@ -490,10 +496,13 @@ function initFAQVideoTabs() {
             // Add active class to current item
             item.classList.add('active');
 
-            // Switch the video source (autoplay=1 makes video start immediately)
+            // Show loading overlay while new video loads
             const videoId = item.getAttribute('data-video-id');
             if (videoId) {
-                videoPlayer.src = `https://www.instagram.com/reel/${videoId}/embed/?autoplay=1`;
+                if (loadingOverlay) {
+                    loadingOverlay.classList.remove('hidden');
+                }
+                videoPlayer.src = `https://www.instagram.com/reel/${videoId}/embed/`;
             }
 
             // Smooth scroll to video mockup on mobile/tablet
