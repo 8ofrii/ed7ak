@@ -1840,125 +1840,179 @@ html[lang="ar"] .digital-ticket-card {
     background-color: var(--color-bg-white);
 }
 
-.faq-accordion-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
-    margin-bottom: 16px;
-    overflow: hidden;
-    background-color: var(--color-bg-warm);
-    transition: var(--transition);
-}
-
-.faq-item:hover {
-    border-color: rgba(197, 168, 128, 0.3);
-}
-
-.faq-question {
-    width: 100%;
-    padding: 22px 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 750;
-    font-size: 1.05rem;
-    color: var(--color-navy-dark);
-    text-align: left;
-}
-
-html[lang="ar"] .faq-question {
-    text-align: right;
-}
-
-html[lang="ar"] .faq-question {
-    font-family: var(--font-ar);
-}
-html[lang="en"] .faq-question {
-    font-family: var(--font-en);
-}
-
-.accordion-arrow {
-    font-size: 0.75rem;
-    transition: transform 0.3s;
-    color: var(--color-gold-base);
-}
-
-.faq-item.faq-open {
-    background-color: #ffffff;
-    border-color: var(--color-gold-base);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-}
-
-.faq-item.faq-open .accordion-arrow {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    padding: 0 30px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-out;
-}
-
-.faq-item.faq-open .faq-answer {
-    padding: 0 30px 24px 30px;
-    max-height: 800px; /* Increased to accommodate Instagram embeds */
-}
-
-.faq-answer p {
-    color: var(--color-text-dark);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* FAQ Video Embeds & Content Layout */
-.faq-answer-content {
+/* ==========================================================================
+   FAQ SPLIT LAYOUT WITH INSTAGRAM VIDEO PLAYER
+   ========================================================================== */
+.faq-split-layout {
     display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 30px;
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+    margin-top: 40px;
     align-items: start;
-    padding: 15px 0 5px 0;
 }
 
-.faq-answer-text {
+/* Premium Smartphone Device Mockup */
+.faq-video-panel {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: center;
+    position: sticky;
+    top: 120px;
 }
 
-.faq-answer-video {
-    width: 100%;
-    max-width: 280px;
-    aspect-ratio: 9 / 16;
-    margin: 0 auto;
-    border-radius: var(--border-radius-sm);
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(197, 168, 128, 0.25);
+.phone-mockup-frame {
+    width: 320px;
+    height: 570px;
     background-color: var(--color-navy-dark);
+    border: 8px solid #1c2541; /* Bezel */
+    border-radius: 36px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.4), 0 0 0 3px var(--color-gold-base); /* Outer gold accent ring */
+    position: relative;
+    overflow: hidden;
 }
 
-.faq-video-iframe {
+.phone-notch {
+    width: 140px;
+    height: 18px;
+    background-color: #1c2541;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.phone-screen iframe {
     width: 100%;
     height: 100%;
     border: none;
-    display: block;
 }
 
-@media (max-width: 768px) {
-    .faq-answer-content {
+/* FAQ Tabs Panel */
+.faq-tabs-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-tab-item {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-tab-item:hover {
+    border-color: rgba(197, 168, 128, 0.5);
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.05);
+}
+
+.faq-tab-item.active {
+    border-color: var(--color-gold-base);
+    box-shadow: 0 8px 25px rgba(197, 168, 128, 0.1);
+}
+
+.faq-tab-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-navy-dark);
+    gap: 20px;
+    position: relative;
+    outline: none;
+}
+
+html[lang="ar"] .faq-tab-btn {
+    text-align: right;
+    font-family: var(--font-ar);
+}
+html[lang="en"] .faq-tab-btn {
+    font-family: var(--font-en);
+}
+
+.faq-tab-btn .btn-num {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gold-base);
+    background-color: rgba(197, 168, 128, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.faq-tab-btn .btn-text {
+    flex-grow: 1;
+    line-height: 1.4;
+    transition: var(--transition);
+}
+
+.faq-tab-item.active .faq-tab-btn .btn-text {
+    color: var(--color-gold-dark);
+}
+
+.faq-tab-btn .btn-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+html[lang="ar"] .faq-tab-btn .btn-arrow {
+    transform: scaleX(-1);
+}
+
+.faq-tab-item.active .btn-arrow {
+    transform: rotate(90deg);
+    color: var(--color-gold-base);
+}
+
+.faq-tab-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    padding: 0 30px;
+}
+
+.faq-tab-item.active .faq-tab-body {
+    padding: 0 30px 24px 30px;
+    max-height: 300px;
+    border-top: 1px solid rgba(197, 168, 128, 0.15);
+    padding-top: 18px;
+}
+
+.faq-tab-body p {
+    color: var(--color-text-dark);
+    font-size: 0.96rem;
+    line-height: 1.7;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .faq-split-layout {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 40px;
     }
-    .faq-answer-video {
-        max-width: 250px;
+    
+    .faq-video-panel {
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
     }
 }
 
