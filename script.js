@@ -490,10 +490,10 @@ function initFAQVideoTabs() {
             // Add active class to current item
             item.classList.add('active');
 
-            // Switch the video source
+            // Switch the video source (autoplay=1 makes video start immediately)
             const videoId = item.getAttribute('data-video-id');
             if (videoId) {
-                videoPlayer.src = `https://www.instagram.com/reel/${videoId}/embed/`;
+                videoPlayer.src = `https://www.instagram.com/reel/${videoId}/embed/?autoplay=1`;
             }
 
             // Smooth scroll to video mockup on mobile/tablet

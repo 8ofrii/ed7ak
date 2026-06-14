@@ -1845,54 +1845,100 @@ html[lang="ar"] .digital-ticket-card {
    ========================================================================== */
 .faq-split-layout {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 40px;
+    grid-template-columns: 300px 1fr;
+    gap: 48px;
     margin-top: 40px;
     align-items: start;
 }
 
-/* Premium Smartphone Device Mockup */
+/* Premium Smartphone Device Mockup – Notch-Free & Realistically Proportioned */
 .faq-video-panel {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     position: sticky;
     top: 120px;
+    perspective: 1000px;
+}
+
+/* Wrapper provides the 3D tilt */
+.phone-mockup-wrapper {
+    transform: rotateY(-8deg) rotateX(2deg);
+    transform-style: preserve-3d;
+    filter: drop-shadow(-20px 30px 50px rgba(0,0,0,0.45));
+    transition: transform 0.6s ease;
+}
+
+.phone-mockup-wrapper:hover {
+    transform: rotateY(-3deg) rotateX(1deg) scale(1.02);
 }
 
 .phone-mockup-frame {
-    width: 320px;
-    height: 570px;
-    background-color: var(--color-navy-dark);
-    border: 8px solid #1c2541; /* Bezel */
-    border-radius: 36px;
-    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.4), 0 0 0 3px var(--color-gold-base); /* Outer gold accent ring */
+    width: 280px;
+    /* 9:19.5 aspect ratio like modern phones */
+    height: 607px;
+    background: linear-gradient(160deg, #23293e 0%, #111827 100%);
+    border: 10px solid #1e2538;
+    border-radius: 44px;
+    box-shadow:
+        inset 0 0 0 1.5px rgba(255,255,255,0.06),  /* inner subtle highlight */
+        0 0 0 1px rgba(197,168,128,0.4),           /* outer gold ring */
+        0 0 0 4px #111827,                          /* dark gap ring */
+        0 40px 80px rgba(0,0,0,0.5),               /* drop shadow */
+        0 10px 30px rgba(197,168,128,0.12);        /* gold glow */
     position: relative;
     overflow: hidden;
 }
 
-.phone-notch {
-    width: 140px;
-    height: 18px;
-    background-color: #1c2541;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+/* Side physical buttons */
+.phone-side-btn {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+    background: linear-gradient(180deg, #2a3148 0%, #1a2035 100%);
+    border-radius: 3px;
+    z-index: 20;
 }
 
+/* Left volume buttons */
+.phone-btn-left {
+    width: 4px;
+    left: -14px;
+    border-radius: 2px 0 0 2px;
+}
+.phone-btn-left.top {
+    height: 32px;
+    top: 100px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+.phone-btn-left.bottom {
+    height: 32px;
+    top: 148px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Right power button */
+.phone-btn-right {
+    width: 4px;
+    height: 50px;
+    right: -14px;
+    top: 120px;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Screen area fills entire mockup frame (pure screen phone style) */
 .phone-screen {
     width: 100%;
     height: 100%;
     background-color: #000;
+    border-radius: 34px;
+    overflow: hidden;
 }
 
 .phone-screen iframe {
     width: 100%;
     height: 100%;
     border: none;
+    display: block;
 }
 
 /* FAQ Tabs Panel */
@@ -2013,6 +2059,16 @@ html[lang="ar"] .faq-tab-btn .btn-arrow {
         position: relative;
         top: 0;
         margin-bottom: 20px;
+        perspective: none;
+    }
+
+    .phone-mockup-wrapper {
+        transform: none;
+        filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+    }
+
+    .phone-mockup-wrapper:hover {
+        transform: none;
     }
 }
 
