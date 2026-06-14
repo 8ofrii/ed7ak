@@ -16,8 +16,16 @@
     
     <!-- Custom CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo_emblem.png">
 </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
 
     <!-- Header Section -->
     <header class="header">
@@ -57,14 +65,25 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
-        <div class="hero-background-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
+        <!-- Floating Dental Background Stickers / Emojis -->
+        <div class="hero-floating-stickers">
+            <div class="floating-sticker tooth-1">🦷</div>
+            <div class="floating-sticker sparkle-1">✨</div>
+            <div class="floating-sticker toothbrush-1">🪥</div>
+            <div class="floating-sticker smile-1">😁</div>
+            <div class="floating-sticker tooth-2">🦷</div>
+            <div class="floating-sticker sparkle-2">✨</div>
         </div>
         <div class="container hero-container">
             <div class="hero-content reveal-on-scroll reveal-left">
-                <h1 class="hero-title lang-ar">اضحك بكل ثقة مع ابتسامة أحلامك</h1>
-                <h1 class="hero-title lang-en">Smile with Confidence, Live with Joy</h1>
+                <!-- Premium Sub-Badge -->
+                <div class="hero-sub-badge">
+                    <span class="lang-ar">✨ الاختيار الأول لابتسامة مثالية صحية</span>
+                    <span class="lang-en">✨ The Premier Choice for a Confident Smile</span>
+                </div>
+                
+                <h1 class="hero-title lang-ar">اضحك بكل ثقة مع <span class="text-gradient-gold">ابتسامة أحلامك</span></h1>
+                <h1 class="hero-title lang-en">Smile with Confidence, <span class="text-gradient-gold">Live with Joy</span></h1>
                 
                 <p class="hero-description lang-ar">
                     في مركز "اضحك" لطب الأسنان بإشراف الدكتور محمد موسى، نقدم لكم أرقى خدمات تجميل وزراعة وتقويم الأسنان بأحدث التقنيات والمعدات العالمية، لنمنحكم ابتسامة صحية وجذابة تدوم طويلاً.
@@ -90,32 +109,41 @@
                 </div>
             </div>
             
-            <div class="hero-image-wrapper reveal-on-scroll reveal-right">
-                <div class="premium-image-container">
-                    <div class="gold-gradient-border"></div>
-                    <div class="hero-video-wrapper">
-                        <video id="heroVideo" class="hero-video" autoplay loop muted playsinline poster="logo_orig.png">
-                            <source src="https://assets.mixkit.co/videos/preview/mixkit-dentist-examining-patients-teeth-with-mirror-41721-large.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video loops.
-                        </video>
-                        <div class="video-overlay"></div>
-                        <button id="videoControlBtn" class="video-control-btn" aria-label="Toggle Video Playback">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                        </button>
+            <div class="hero-media-collage reveal-on-scroll reveal-right">
+                <!-- Static backdrop shadow -->
+                <div class="collage-backdrop-shadow"></div>
+                
+                <!-- Main premium image card -->
+                <div class="collage-card main-card">
+                    <div class="gold-gradient-border-outer"></div>
+                    <img src="hero_dental.png" alt="Edhak Dental Clinic Premium Smile" class="collage-img">
+                    <div class="collage-overlay"></div>
+                </div>
+                
+                <!-- Floating Experience Card -->
+                <div class="collage-card floating-experience">
+                    <div class="stat-icon-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
                     </div>
-                    
-                    <!-- Floating Quick Stats Widget -->
-                    <div class="floating-stat-card">
-                        <div class="stat-icon">
-                            <svg class="stat-badge-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px; color: var(--color-gold-base);">
-                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-val">+15</span>
-                            <span class="stat-lbl lang-ar">عاماً من الخبرة</span>
-                            <span class="stat-lbl lang-en">Years Experience</span>
-                        </div>
+                    <div class="stat-info">
+                        <span class="stat-val">+15</span>
+                        <span class="stat-lbl lang-ar">عاماً من الخبرة</span>
+                        <span class="stat-lbl lang-en">Years Experience</span>
+                    </div>
+                </div>
+
+                <!-- Floating Trust / Doctor Card -->
+                <div class="collage-card floating-trust">
+                    <div class="avatar-group">
+                        <img src="doctor_mohamed.png" alt="Doctor Moosa" class="avatar-mini">
+                        <img src="doctor_sarah.png" alt="Doctor Sarah" class="avatar-mini">
+                    </div>
+                    <div class="trust-info">
+                        <div class="trust-stars">★★★★★</div>
+                        <span class="trust-lbl lang-ar">نخبة من الأطباء الاستشاريين</span>
+                        <span class="trust-lbl lang-en">Expert Consultant Team</span>
                     </div>
                 </div>
             </div>
@@ -353,12 +381,6 @@
                                 <p class="doctor-bio lang-en">
                                     Consultant of Dental Cosmetics & Implants, with over 15 years of experience in immediate implants and Hollywood Smile designs. Dedicated to using state-of-the-art tech for comfort and quality.
                                 </p>
-                                <div class="doctor-schedule">
-                                    <div class="schedule-lbl lang-ar">📅 المواعيد بالعيادة: <span class="schedule-val">كل يوم ماعدا الأحد</span></div>
-                                    <div class="schedule-lbl lang-en">📅 Clinical Schedule: <span class="schedule-val">Daily except Sunday</span></div>
-                                </div>
-                                <a href="#booking" class="btn btn-gold btn-sm lang-ar" style="margin-top: 15px; align-self: flex-start;">احجز موعد كشف معه</a>
-                                <a href="#booking" class="btn btn-gold btn-sm lang-en" style="margin-top: 15px; align-self: flex-start;">Book Consultation</a>
                             </div>
                         </div>
 
@@ -699,16 +721,7 @@
                                 <div class="date-helper-text lang-ar">العيادة تغلق يوم الجمعة في فرع بنها، ويوم الأحد في فرع مصر الجديدة.</div>
                                 <div class="date-helper-text lang-en">Closed on Fridays in Banha & Sundays in Heliopolis.</div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label lang-ar">الأوقات المتاحة لهذا اليوم <span class="required">*</span></label>
-                                <label class="form-label lang-en">Available Slots for this Date <span class="required">*</span></label>
-                                <div class="time-slots-grid" id="timeSlotsGrid">
-                                    <span class="no-slots-msg lang-ar">يرجى تحديد التاريخ أولاً لعرض الأوقات المتاحة.</span>
-                                    <span class="no-slots-msg lang-en">Please select a date first to display available slots.</span>
-                                </div>
-                                <input type="hidden" id="selectedTimeSlot" name="selectedTimeSlot" required>
-                            </div>
+                            <input type="hidden" id="selectedTimeSlot" name="selectedTimeSlot" value="day_only">
                         </div>
 
                         <!-- Right Column: Clinic, Treatment & Patient Details -->
@@ -841,8 +854,15 @@
                         <span class="accordion-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="lang-ar">نعم، نحرص في مركز "اضحك" على استخدام أحدث أجهزة التخدير الموضعي وتقنيات الزراعة اللامائية الحديثة، مما يضمن خوض تجربة علاجية مريحة وخالية تماماً من الألم أو التوتر.</p>
-                        <p class="lang-en">Yes, at EDHAK Center we utilize advanced local anesthesia equipment and modern waterless implant techniques, ensuring a comfortable, pain-free, and stress-free treatment experience.</p>
+                        <div class="faq-answer-content">
+                            <div class="faq-answer-text">
+                                <p class="lang-ar">نعم، نحرص في مركز "اضحك" على استخدام أحدث أجهزة التخدير الموضعي وتقنيات الزراعة اللامائية الحديثة، مما يضمن خوض تجربة علاجية مريحة وخالية تماماً من الألم أو التوتر.</p>
+                                <p class="lang-en">Yes, at EDHAK Center we utilize advanced local anesthesia equipment and modern waterless implant techniques, ensuring a comfortable, pain-free, and stress-free treatment experience.</p>
+                            </div>
+                            <div class="faq-answer-video">
+                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -854,8 +874,15 @@
                         <span class="accordion-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="lang-ar">التقويم العادي (المعدني) يتكون من حواصر وأسلاك تثبت على الأسنان طوال فترة العلاج. أما التقويم الشفاف (Aligners) فهو عبارة عن قوالب بلاستيكية طبية شفافة غير مرئية وقابلة للإزالة أثناء تناول الطعام وتنظيف الأسنان، مما يجعله أكثر راحة وجمالاً.</p>
-                        <p class="lang-en">Traditional metal braces consist of brackets and wires fixed to teeth throughout treatment. Clear aligners, however, are medical-grade transparent plastic trays that are invisible and removable while eating or brushing, offering greater aesthetics and comfort.</p>
+                        <div class="faq-answer-content">
+                            <div class="faq-answer-text">
+                                <p class="lang-ar">التقويم العادي (المعدني) يتكون من حواصر وأسلاك تثبت على الأسنان طوال فترة العلاج. أما التقويم الشفاف (Aligners) فهو عبارة عن قوالب بلاستيكية طبية شفافة غير مرئية وقابلة للإزالة أثناء تناول الطعام وتنظيف الأسنان، مما يجعله أكثر راحة وجمالاً.</p>
+                                <p class="lang-en">Traditional metal braces consist of brackets and wires fixed to teeth throughout treatment. Clear aligners, however, are medical-grade transparent plastic trays that are invisible and removable while eating or brushing, offering greater aesthetics and comfort.</p>
+                            </div>
+                            <div class="faq-answer-video">
+                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -867,12 +894,39 @@
                         <span class="accordion-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="lang-ar">تختلف تكلفة الفينير بناءً على خامة العدسات المستخدمة (إيماكس، زيركون) وعدد الأسنان التي سيتم تجميلها. نحن نوفر باقات عروض وخطط دفع مرنة. يمكنك حجز استشارة تجميلية ليقوم الدكتور بفحص حالتك وتقديم كشف أسعار تفصيلي.</p>
-                        <p class="lang-en">The cost of veneers varies depending on the materials used (E-max, Zirconia) and the number of teeth to be treated. We offer flexible payment plans and packages. You can book a consultation to receive a custom treatment plan and pricing.</p>
+                        <div class="faq-answer-content">
+                            <div class="faq-answer-text">
+                                <p class="lang-ar">تختلف تكلفة الفينير بناءً على خامة العدسات المستخدمة (إيماكس، زيركون) وعدد الأسنان التي سيتم تجميلها. نحن نوفر باقات عروض وخطط دفع مرنة. يمكنك حجز استشارة تجميلية ليقوم الدكتور بفحص حالتك وتقديم كشف أسعار تفصيلي.</p>
+                                <p class="lang-en">The cost of veneers varies depending on the materials used (E-max, Zirconia) and the number of teeth to be treated. We offer flexible payment plans and packages. You can book a consultation to receive a custom treatment plan and pricing.</p>
+                            </div>
+                            <div class="faq-answer-video">
+                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
+                <div class="faq-item reveal-on-scroll">
+                    <button class="faq-question">
+                        <span class="question-text lang-ar">ازاي بنعمل تبييض الاسنان؟</span>
+                        <span class="question-text lang-en">How do we perform teeth whitening?</span>
+                        <span class="accordion-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <div class="faq-answer-text">
+                                <p class="lang-ar">نقوم بتبييض الأسنان بالليزر باستخدام أحدث أجهزة "جلايد" العالمية والمواد الطبية الآمنة التي تحمي المينا وتمنحك درجة بياض طبيعية وجذابة خلال جلسة واحدة فقط.</p>
+                                <p class="lang-en">We perform laser teeth whitening using state-of-the-art international equipment and safe medical agents that protect your enamel, providing a natural, bright smile in just one session.</p>
+                            </div>
+                            <div class="faq-answer-video">
+                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
                 <div class="faq-item reveal-on-scroll">
                     <button class="faq-question">
                         <span class="question-text lang-ar">ما هي مواعيد العمل الرسمية للفرعين؟</span>
@@ -880,14 +934,21 @@
                         <span class="accordion-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="lang-ar">
-                            <strong>فرع بنها:</strong> يومياً من 12:00 ظهراً حتى 10:00 مساءً (الجمعة مغلق).<br>
-                            <strong>فرع مصر الجديدة:</strong> يومياً من 1:00 ظهراً حتى 9:00 مساءً (الأحد مغلق).
-                        </p>
-                        <p class="lang-en">
-                            <strong>Banha Branch:</strong> Daily from 12:00 PM to 10:00 PM (Friday Closed).<br>
-                            <strong>Heliopolis Branch:</strong> Daily from 1:00 PM to 9:00 PM (Sunday Closed).
-                        </p>
+                        <div class="faq-answer-content">
+                            <div class="faq-answer-text">
+                                <p class="lang-ar">
+                                    <strong>فرع بنها:</strong> يومياً من 12:00 ظهراً حتى 10:00 مساءً (الجمعة مغلق).<br>
+                                    <strong>فرع مصر الجديدة:</strong> يومياً من 1:00 ظهراً حتى 9:00 مساءً (الأحد مغلق).
+                                </p>
+                                <p class="lang-en">
+                                    <strong>Banha Branch:</strong> Daily from 12:00 PM to 10:00 PM (Friday Closed).<br>
+                                    <strong>Heliopolis Branch:</strong> Daily from 1:00 PM to 9:00 PM (Sunday Closed).
+                                </p>
+                            </div>
+                            <div class="faq-answer-video">
+                                <iframe src="https://www.instagram.com/reel/DZhqd0fO6Y5/embed/" class="faq-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

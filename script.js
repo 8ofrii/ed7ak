@@ -273,7 +273,6 @@ mapTabs.forEach(tab => {
    BOOKING WIZARD LOGIC
    ========================================================================== */
 const bookingForm = document.getElementById('bookingForm');
-const timeSlotsGrid = document.getElementById('timeSlotsGrid');
 const selectedTimeSlotInput = document.getElementById('selectedTimeSlot');
 const bookingDateInput = document.getElementById('bookingDate');
 const bookingBranchInputs = document.getElementsByName('bookingBranch');
@@ -317,19 +316,11 @@ document.querySelectorAll('.branch-option-card').forEach(card => {
             if (isClosed) {
                 calSelectedDateStr = "";
                 bookingDateInput.value = "";
-                selectedTimeSlotInput.value = "";
-                timeSlotsGrid.innerHTML = currentLanguage === 'ar'
-                    ? '<span class="no-slots-msg">يرجى تحديد التاريخ أولاً لعرض الأوقات المتاحة.</span>'
-                    : '<span class="no-slots-msg">Please select a date first to display available slots.</span>';
+                selectedTimeSlotInput.value = "day_only";
             }
         }
         
         renderSmartCalendar();
-        
-        // Trigger date slot recalculation if date is already picked
-        if (bookingDateInput.value) {
-            generateTimeSlots();
-        }
     });
 });
 
@@ -340,61 +331,7 @@ const timeSlotsPool = [
 ];
 
 function generateTimeSlots() {
-    timeSlotsGrid.innerHTML = '';
-    selectedTimeSlotInput.value = '';
-
-    const selectedDateStr = bookingDateInput.value;
-    if (!selectedDateStr) return;
-
-    const selectedDate = new Date(selectedDateStr);
-    const dayOfWeek = selectedDate.getDay(); // 0 = Sunday, 5 = Friday, 6 = Saturday
-
-    const activeBranch = document.querySelector('input[name="bookingBranch"]:checked').value;
-
-    // Check if branch is closed on that day
-    let isClosed = false;
-    if (activeBranch === 'banha' && dayOfWeek === 5) {
-        // Banha closed on Friday
-        isClosed = true;
-    } else if (activeBranch === 'heliopolis' && dayOfWeek === 0) {
-        // Heliopolis closed on Sunday
-        isClosed = true;
-    }
-
-    if (isClosed) {
-        timeSlotsGrid.innerHTML = `
-            <span class="no-slots-msg lang-ar" style="color: var(--color-error)">⚠️ نعتذر، العيادة مغلقة في هذا اليوم. يرجى اختيار تاريخ آخر.</span>
-            <span class="no-slots-msg lang-en" style="color: var(--color-error)">⚠️ Sorry, the clinic is closed on this day. Please select another date.</span>
-        `;
-        return;
-    }
-
-    // Shuffle/Simulate slots to look realistic (disable some random slots)
-    timeSlotsPool.forEach(slot => {
-        const isAvailable = Math.random() > 0.3; // 70% chance slot is free
-        const slotBtn = document.createElement('div');
-        slotBtn.classList.add('time-slot');
-        slotBtn.textContent = slot;
-
-        if (isAvailable) {
-            slotBtn.addEventListener('click', () => {
-                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
-                slotBtn.classList.add('selected');
-                selectedTimeSlotInput.value = slot;
-            });
-        } else {
-            slotBtn.classList.add('disabled');
-            slotBtn.style.opacity = '0.4';
-            slotBtn.style.cursor = 'not-allowed';
-            slotBtn.style.backgroundColor = 'rgba(0,0,0,0.05)';
-        }
-
-        timeSlotsGrid.appendChild(slotBtn);
-    });
-}
-
-if (bookingDateInput) {
-    bookingDateInput.addEventListener('change', generateTimeSlots);
+    // Booking is day-only
 }
 
 // Validate inputs of the booking form before submission
@@ -405,9 +342,8 @@ function validateBookingForm() {
         return false;
     }
     const date = bookingDateInput.value;
-    const slot = selectedTimeSlotInput.value;
-    if (!date || !slot) {
-        alert(currentLanguage === 'ar' ? '⚠️ يرجى اختيار التاريخ والوقت المفضل.' : '⚠️ Please select preferred Date & Time.');
+    if (!date) {
+        alert(currentLanguage === 'ar' ? '⚠️ يرجى اختيار التاريخ المفضل.' : '⚠️ Please select preferred Date.');
         return false;
     }
     const name = document.getElementById('patientName').value.trim();
@@ -441,7 +377,6 @@ function submitBookingForm() {
     const serviceSelect = document.getElementById('bookingService');
     const serviceText = serviceSelect.options[serviceSelect.selectedIndex]?.text || '';
     const dateVal = bookingDateInput.value;
-    const timeVal = selectedTimeSlotInput.value;
     const nameVal = document.getElementById('patientName').value.trim();
     const phoneVal = document.getElementById('patientPhone').value.trim();
 
@@ -471,9 +406,9 @@ function submitBookingForm() {
                 <span class="ticket-val">${ticketBranchText}</span>
             </div>
             <div class="ticket-item">
-                <span class="ticket-lbl lang-ar">التاريخ والوقت</span>
-                <span class="ticket-lbl lang-en">Date & Time</span>
-                <span class="ticket-val">${formatReadableDate(dateVal, currentLanguage)} @ ${timeVal}</span>
+                <span class="ticket-lbl lang-ar">التاريخ المختار</span>
+                <span class="ticket-lbl lang-en">Selected Date</span>
+                <span class="ticket-val">${formatReadableDate(dateVal, currentLanguage)}</span>
             </div>
             <div class="ticket-item">
                 <span class="ticket-lbl lang-ar">الخدمة</span>
@@ -491,8 +426,8 @@ function submitBookingForm() {
     const clinicPhone = branchVal === 'banha' ? '201022225000' : '201233334000';
     const readableDate = formatReadableDate(dateVal, currentLanguage);
     const msgText = currentLanguage === 'ar'
-        ? `مرحباً عيادة اضحك، أود تأكيد موعد حجز الكشف الخاص بي:\nالاسم: ${nameVal}\nالفرع: ${ticketBranchText}\nالتاريخ: ${readableDate}\nالوقت: ${timeVal}\nالخدمة: ${serviceText}\nرقم المرجع: ${refCode}`
-        : `Hello Edhak Clinic, I would like to confirm my dental booking:\nName: ${nameVal}\nBranch: ${ticketBranchText}\nDate: ${readableDate}\nTime: ${timeVal}\nTreatment: ${serviceText}\nReference: ${refCode}`;
+        ? `مرحباً عيادة اضحك، أود تأكيد موعد حجز الكشف الخاص بي:\nالاسم: ${nameVal}\nالفرع: ${ticketBranchText}\nالتاريخ: ${readableDate}\nالخدمة: ${serviceText}\nرقم المرجع: ${refCode}`
+        : `Hello Edhak Clinic, I would like to confirm my dental booking:\nName: ${nameVal}\nBranch: ${ticketBranchText}\nDate: ${readableDate}\nTreatment: ${serviceText}\nReference: ${refCode}`;
         
     shareWhatsappBtn.href = `https://wa.me/${clinicPhone}?text=${encodeURIComponent(msgText)}`;
 
@@ -512,12 +447,10 @@ resetWizardBtn.addEventListener('click', () => {
     bookingForm.style.display = 'block';
     document.getElementById('wizardSuccess').classList.remove('active');
     
-    // Clear time slots
-    timeSlotsGrid.innerHTML = `
-        <span class="no-slots-msg lang-ar">يرجى تحديد التاريخ أولاً لعرض الأوقات المتاحة.</span>
-        <span class="no-slots-msg lang-en">Please select a date first to display available slots.</span>
-    `;
-    selectedTimeSlotInput.value = '';
+    // Reset hidden slot input
+    if (selectedTimeSlotInput) {
+        selectedTimeSlotInput.value = 'day_only';
+    }
     
     // Reset smart calendar selection
     calSelectedDateStr = "";
@@ -1006,7 +939,6 @@ function renderSmartCalendar() {
                 calSelectedDateStr = dateStr;
                 bookingDateInput.value = dateStr;
                 renderSmartCalendar();
-                generateTimeSlots();
             });
         }
         
@@ -1301,3 +1233,72 @@ function initDoctorsSlider() {
     window.addEventListener('resize', updateSliderDimensions);
     updateSliderDimensions();
 }
+
+/* ==========================================================================
+   SCROLL PROGRESS INDICATOR
+   ========================================================================== */
+function initScrollProgress() {
+    const progressBar = document.getElementById('scrollProgressBar');
+    if (!progressBar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = scrollPercent + '%';
+    }, { passive: true });
+}
+
+/* ==========================================================================
+   3D MOUSE PARALLAX TILT ON HERO COLLAGE
+   ========================================================================== */
+function initHeroParallax() {
+    const collage = document.querySelector('.hero-media-collage');
+    const mainCard = document.querySelector('.hero-media-collage .main-card');
+    const floatExp = document.querySelector('.hero-media-collage .floating-experience');
+    const floatTrust = document.querySelector('.hero-media-collage .floating-trust');
+    
+    if (!collage || !mainCard) return;
+
+    collage.addEventListener('mousemove', (e) => {
+        const rect = collage.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        
+        // Coordinates relative to the center of the collage container (-0.5 to 0.5)
+        const mouseX = (e.clientX - rect.left) / width - 0.5;
+        const mouseY = (e.clientY - rect.top) / height - 0.5;
+        
+        // Rotations: Y rotates based on horizontal mouse, X rotates based on vertical mouse
+        const rotateY = mouseX * 24; // Up to 12 degrees rotation
+        const rotateX = -mouseY * 24; // Up to 12 degrees rotation
+        
+        mainCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+        
+        // Parallax offset for floating cards (translate in opposite direction)
+        const offsetX = -mouseX * 40;
+        const offsetY = -mouseY * 40;
+        
+        if (floatExp) {
+            floatExp.style.transform = `translate3d(${offsetX * 1.5}px, ${offsetY * 1.5}px, 60px)`;
+        }
+        if (floatTrust) {
+            floatTrust.style.transform = `translate3d(${offsetX * 0.8}px, ${offsetY * 0.8}px, 40px)`;
+        }
+    });
+
+    collage.addEventListener('mouseleave', () => {
+        // Smoothly transition back to center
+        mainCard.style.transform = `rotateX(0deg) rotateY(0deg) translateZ(0)`;
+        if (floatExp) {
+            floatExp.style.transform = `translate3d(0, 0, 60px)`;
+        }
+        if (floatTrust) {
+            floatTrust.style.transform = `translate3d(0, 0, 40px)`;
+        }
+    });
+}
+
+// Initialize premium animations
+initScrollProgress();
+initHeroParallax();
