@@ -256,18 +256,18 @@ html[lang="en"] .btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 125px; /* Increased for a larger prominent logo */
+    height: 110px; /* Slightly smaller for perfect proportion */
     transition: var(--transition);
 }
 
 /* Header Shrinking Transitions (Desktop Only) */
 @media (min-width: 769px) {
     .header[data-active-section]:not([data-active-section="home"]) .header-container {
-        height: 95px; /* Increased */
+        height: 85px; /* Slightly smaller on scroll */
     }
 
     .header[data-active-section]:not([data-active-section="home"]) .logo-image {
-        height: 75px; /* Increased */
+        height: 64px; /* Slightly smaller on scroll */
     }
 }
 
@@ -278,7 +278,7 @@ html[lang="en"] .btn {
 }
 
 .logo-image {
-    height: 100px; /* Increased for maximum clarity and visibility */
+    height: 84px; /* Slightly smaller for elegance and balance */
     width: auto;
     object-fit: contain;
     transition: var(--transition);
@@ -2747,19 +2747,19 @@ html[lang="ar"] .chat-send-btn:hover .chat-send-icon {
 
 @media (max-width: 768px) {
     .header-container {
-        height: 95px; /* Increased for mobile logo visibility */
+        height: 88px; /* Slightly smaller for mobile layout */
     }
     
     .logo-image {
-        height: 75px; /* Increased */
+        height: 68px; /* Slightly smaller for mobile layout */
     }
     
     .nav-menu {
         position: fixed;
-        top: 95px; /* Updated to match new mobile header height */
+        top: 88px; /* Updated to match mobile header height */
         left: 0;
         width: 100%;
-        height: calc(100vh - 95px); /* Updated to match new mobile header height */
+        height: calc(100vh - 88px); /* Updated to match mobile header height */
         background-color: var(--color-navy-dark);
         flex-direction: column;
         padding: 50px 0;

@@ -81,12 +81,55 @@ function setLanguage(lang) {
     // Update input placeholders dynamically
     const chatInput = document.getElementById('chatInput');
     const chatInputEn = document.getElementById('chatInputEn');
+    const patientName = document.getElementById('patientName');
+    const patientNotes = document.getElementById('patientNotes');
+
     if (lang === 'ar') {
-        chatInput.style.display = 'block';
-        chatInputEn.style.display = 'none';
+        if (chatInput) chatInput.style.display = 'block';
+        if (chatInputEn) chatInputEn.style.display = 'none';
+        if (patientName) patientName.setAttribute('placeholder', 'الاسم ثلاثي');
+        if (patientNotes) patientNotes.setAttribute('placeholder', 'مثال: ألم شديد في الضرس');
     } else {
-        chatInput.style.display = 'none';
-        chatInputEn.style.display = 'block';
+        if (chatInput) chatInput.style.display = 'none';
+        if (chatInputEn) chatInputEn.style.display = 'block';
+        if (patientName) patientName.setAttribute('placeholder', 'Your full name');
+        if (patientNotes) patientNotes.setAttribute('placeholder', 'e.g., severe toothache, general checkup');
+    }
+
+    // Translate bookingService select options dynamically to bypass native browser styling constraints
+    const bookingService = document.getElementById('bookingService');
+    if (bookingService) {
+        const currentValue = bookingService.value;
+        const serviceOptions = {
+            ar: [
+                { value: '', text: 'اختر نوع الخدمة...' },
+                { value: 'cosmetics', text: 'تجميل الأسنان وهوليوود سمايل' },
+                { value: 'implants', text: 'زراعة الأسنان' },
+                { value: 'ortho', text: 'تقويم الأسنان' },
+                { value: 'whitening', text: 'تبييض الأسنان بالليزر' },
+                { value: 'pediatric', text: 'طب أسنان الأطفال' },
+                { value: 'rootcanal', text: 'علاج الجذور والعصب' },
+                { value: 'general', text: 'كشف واستشارة عامة' }
+            ],
+            en: [
+                { value: '', text: 'Select service type...' },
+                { value: 'cosmetics', text: 'Cosmetic Dentistry & Hollywood Smile' },
+                { value: 'implants', text: 'Dental Implants' },
+                { value: 'ortho', text: 'Orthodontics (Braces/Aligners)' },
+                { value: 'whitening', text: 'Teeth Whitening' },
+                { value: 'pediatric', text: 'Pediatric Dentistry' },
+                { value: 'rootcanal', text: 'Root Canal & Endodontics' },
+                { value: 'general', text: 'General Checkup & Consultation' }
+            ]
+        };
+        bookingService.innerHTML = '';
+        serviceOptions[lang].forEach(opt => {
+            const optionEl = document.createElement('option');
+            optionEl.value = opt.value;
+            optionEl.textContent = opt.text;
+            bookingService.appendChild(optionEl);
+        });
+        bookingService.value = currentValue; // preserve selection if any
     }
 
     // Refresh dynamic contents like date inputs
