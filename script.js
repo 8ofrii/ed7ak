@@ -805,25 +805,17 @@ function generateNaturalReply(userMsg) {
     }
 
     // 4. Doctor query
-    if (text.includes('دكتور') || text.includes('طبيب') || text.includes('أطباء') || text.includes('محمد') || text.includes('موسى') || text.includes('سارة') || text.includes('مصطفى') || text.includes('عبدالله') || text.includes('منصور') || text.includes('الدريني') || text.includes('زيدان') || text.includes('doctor') || text.includes('dr') || text.includes('dentist')) {
+    if (text.includes('دكتور') || text.includes('طبيب') || text.includes('أطباء') || text.includes('محمد') || text.includes('موسى') || text.includes('سارة') || text.includes('مصطفى') || text.includes('doctor') || text.includes('dr') || text.includes('dentist')) {
         reply = isAr
             ? '🦷 يضم مركز "اضحك" نخبة من الأطباء والاستشاريين:\n' +
               '• د. محمد موسى (المؤسس والمشرف العام - زراعة وتجميل الأسنان)\n' +
               '• د. سارة حمدي (أخصائية التركيبات الثابتة والجمالية)\n' +
               '• د. مصطفى الرفاعي (أخصائي الحشوات التجميلية)\n' +
-              '• د. عبدالله فتحي (أخصائي طب وجراحة الفم والأسنان)\n' +
-              '• د. محمد منصور (أخصائي علاج الجذور وحشو العصب)\n' +
-              '• د. أحمد الدريني (أخصائي طب أسنان الأطفال)\n' +
-              '• د. محمد زيدان (أخصائي التقويم والتقويم الشفاف)\n' +
               'يمكنك مراجعة مواعيد تواجدهم التفصيلية في قسم "أطباؤنا" بالموقع.'
             : '🦷 EDHAK Center features an elite team of dental specialists:\n' +
               '• Dr. Mohamed Moosa (Founder & supervisor - Implants & Cosmetics)\n' +
               '• Dr. Sarah Hamdy (Fixed Prosthodontics Specialist)\n' +
               '• Dr. Mostafa El-Refaey (Cosmetic Fillings Specialist)\n' +
-              '• Dr. Abdullah Fathy (General Dentist & Oral Surgery Specialist)\n' +
-              '• Dr. Mohamed Mansour (Endodontics & Root Canal Specialist)\n' +
-              '• Dr. Ahmed El-Derini (Pediatric Dentistry Specialist)\n' +
-              '• Dr. Mohamed Zidan (Orthodontics & Clear Aligners Specialist)\n' +
               'You can review their detailed clinical schedules in the "Our Doctors" section of the page.';
         appendChatMessage(reply, 'bot');
         return;
@@ -1140,8 +1132,7 @@ function initDoctorsSlider() {
     function getItemsPerView() {
         if (window.innerWidth <= 576) return 1;
         if (window.innerWidth <= 992) return 2;
-        if (window.innerWidth <= 1200) return 3;
-        return 4;
+        return 3;
     }
 
     function updateSliderDimensions() {
@@ -1149,6 +1140,17 @@ function initDoctorsSlider() {
         const maxIndex = Math.max(0, cards.length - itemsPerView);
         if (currentIndex > maxIndex) {
             currentIndex = maxIndex;
+        }
+
+        // Hide controls if there's only one page
+        if (maxIndex === 0) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            dotsContainer.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'flex';
+            nextBtn.style.display = 'flex';
+            dotsContainer.style.display = 'flex';
         }
 
         // Re-generate pagination dots
