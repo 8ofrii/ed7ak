@@ -3205,7 +3205,7 @@ html[lang="ar"] .typing-dots {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    width: calc((100% - (2 * 30px)) / 3);
+    width: calc((100% - (3 * 30px)) / 4);
 }
 
 /* Highlight founder card */

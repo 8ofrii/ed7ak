@@ -849,17 +849,23 @@ function generateNaturalReply(userMsg) {
     }
 
     // 4. Doctor query
-    if (text.includes('دكتور') || text.includes('طبيب') || text.includes('أطباء') || text.includes('محمد') || text.includes('موسى') || text.includes('سارة') || text.includes('مصطفى') || text.includes('doctor') || text.includes('dr') || text.includes('dentist')) {
+    if (text.includes('دكتور') || text.includes('طبيب') || text.includes('أطباء') || text.includes('محمد') || text.includes('موسى') || text.includes('سارة') || text.includes('مصطفى') || text.includes('الدريني') || text.includes('زيدان') || text.includes('منصور') || text.includes('doctor') || text.includes('dr') || text.includes('dentist') || text.includes('derini') || text.includes('zidan') || text.includes('mansour')) {
         reply = isAr
             ? '🦷 يضم مركز "اضحك" نخبة من الأطباء والاستشاريين:\n' +
               '• د. محمد موسى (المؤسس والمشرف العام - زراعة وتجميل الأسنان)\n' +
               '• د. سارة حمدي (أخصائية التركيبات الثابتة والجمالية)\n' +
               '• د. مصطفى الرفاعي (أخصائي الحشوات التجميلية)\n' +
+              '• د. أحمد الدريني (أخصائي طب أسنان الأطفال)\n' +
+              '• د. محمد زيدان (أخصائي التقويم والتقويم الشفاف)\n' +
+              '• د. محمد منصور (أخصائي علاج الجذور وحشو العصب)\n' +
               'يمكنك مراجعة مواعيد تواجدهم التفصيلية في قسم "أطباؤنا" بالموقع.'
             : '🦷 EDHAK Center features an elite team of dental specialists:\n' +
               '• Dr. Mohamed Moosa (Founder & supervisor - Implants & Cosmetics)\n' +
               '• Dr. Sarah Hamdy (Fixed Prosthodontics Specialist)\n' +
               '• Dr. Mostafa El-Refaey (Cosmetic Fillings Specialist)\n' +
+              '• Dr. Ahmed El-Derini (Pediatric Dentistry Specialist)\n' +
+              '• Dr. Mohamed Zidan (Orthodontics & Clear Aligners Specialist)\n' +
+              '• Dr. Mohamed Mansour (Endodontics & Root Canal Specialist)\n' +
               'You can review their detailed clinical schedules in the "Our Doctors" section of the page.';
         appendChatMessage(reply, 'bot');
         return;
@@ -1172,11 +1178,38 @@ function initDoctorsSlider() {
 
     let currentIndex = 0;
     let itemsPerView = 3;
+    let autoplayInterval;
 
     function getItemsPerView() {
         if (window.innerWidth <= 576) return 1;
         if (window.innerWidth <= 992) return 2;
-        return 3;
+        if (window.innerWidth <= 1200) return 3;
+        return 4;
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        autoplayInterval = setInterval(() => {
+            itemsPerView = getItemsPerView();
+            const maxIndex = Math.max(0, cards.length - itemsPerView);
+            if (maxIndex === 0) return;
+            if (currentIndex >= maxIndex) {
+                goToSlide(0);
+            } else {
+                goToSlide(currentIndex + 1);
+            }
+        }, 4000);
+    }
+
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+        }
+    }
+
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
     }
 
     function updateSliderDimensions() {
@@ -1191,10 +1224,12 @@ function initDoctorsSlider() {
             prevBtn.style.display = 'none';
             nextBtn.style.display = 'none';
             dotsContainer.style.display = 'none';
+            stopAutoplay();
         } else {
             prevBtn.style.display = 'flex';
             nextBtn.style.display = 'flex';
             dotsContainer.style.display = 'flex';
+            startAutoplay();
         }
 
         // Re-generate pagination dots
@@ -1207,6 +1242,7 @@ function initDoctorsSlider() {
             dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
             dot.addEventListener('click', () => {
                 goToSlide(i);
+                resetAutoplay();
             });
             dotsContainer.appendChild(dot);
         }
@@ -1259,10 +1295,12 @@ function initDoctorsSlider() {
 
     prevBtn.addEventListener('click', () => {
         goToSlide(currentIndex - 1);
+        resetAutoplay();
     });
 
     nextBtn.addEventListener('click', () => {
         goToSlide(currentIndex + 1);
+        resetAutoplay();
     });
 
     // Touch Swipe Gesture Detection
@@ -1271,6 +1309,7 @@ function initDoctorsSlider() {
     
     track.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
+        stopAutoplay();
     }, { passive: true });
 
     track.addEventListener('touchend', (e) => {
@@ -1294,7 +1333,15 @@ function initDoctorsSlider() {
                 }
             }
         }
+        startAutoplay();
     }, { passive: true });
+
+    // Hover listeners to pause/play autoplay
+    const sliderContainer = document.querySelector('.doctors-slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoplay);
+        sliderContainer.addEventListener('mouseleave', startAutoplay);
+    }
 
     // Handle language toggle sync
     const langToggleBtn = document.getElementById('langToggle');
