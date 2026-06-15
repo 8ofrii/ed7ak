@@ -263,11 +263,11 @@ html[lang="en"] .btn {
 /* Header Shrinking Transitions (Desktop Only) */
 @media (min-width: 769px) {
     .header[data-active-section]:not([data-active-section="home"]) .header-container {
-        height: 95px; /* Proportional height on scroll */
+        height: 90px;
     }
 
     .header[data-active-section]:not([data-active-section="home"]) .logo-image {
-        height: 75px; /* Larger logo on scroll */
+        height: 70px;
     }
 }
 
@@ -278,7 +278,7 @@ html[lang="en"] .btn {
 }
 
 .logo-image {
-    height: 95px; /* Increased for maximum clarity and visibility */
+    height: 95px;
     width: auto;
     object-fit: contain;
     transition: var(--transition);
@@ -289,8 +289,9 @@ html[lang="en"] .btn {
 }
 
 .footer-logo-image {
-    height: 65px; /* Slightly larger in footer */
+    height: 65px;
 }
+
 
 .nav-menu {
     display: flex;
@@ -2747,19 +2748,19 @@ html[lang="ar"] .chat-send-btn:hover .chat-send-icon {
 
 @media (max-width: 768px) {
     .header-container {
-        height: 95px; /* Increased for mobile logo visibility */
+        height: 90px;
     }
     
     .logo-image {
-        height: 75px; /* Increased logo size on mobile */
+        height: 72px;
     }
     
     .nav-menu {
         position: fixed;
-        top: 95px; /* Updated to match new mobile header height */
+        top: 90px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 95px); /* Updated to match new mobile header height */
+        height: calc(100vh - 90px);
         background-color: var(--color-navy-dark);
         flex-direction: column;
         padding: 50px 0;
