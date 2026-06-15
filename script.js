@@ -4,12 +4,12 @@
 const i18n = {
     // Navigation
     nav_home: { ar: 'الرئيسية', en: 'Home' },
-    nav_services: { ar: 'الخدمات', en: 'Services' },
-    nav_gallery: { ar: 'ابتساماتنا', en: 'Smile Gallery' },
-    nav_doctors: { ar: 'أطباؤنا', en: 'Our Doctors' },
-    nav_branches: { ar: 'الفروع', en: 'Branches' },
-    nav_faq: { ar: 'الأسئلة الشائعة', en: 'FAQ' },
-    nav_booking_nav: { ar: 'احجز الآن', en: 'Book Now' },
+    nav_services: { ar: 'خدماتنا', en: 'Our Services' },
+    nav_gallery: { ar: 'معرض الابتسامات', en: 'Smile Gallery' },
+    nav_doctors: { ar: 'فريقنا الطبي', en: 'Medical Team' },
+    nav_branches: { ar: 'فروعنا', en: 'Our Branches' },
+    nav_faq: { ar: 'الأسئلة الشائعة', en: 'FAQs' },
+    nav_booking_nav: { ar: 'تواصل معنا', en: 'Contact Us' },
     btn_book_now: { ar: 'احجز الآن', en: 'Book Now' },
 
     // Hero Section
