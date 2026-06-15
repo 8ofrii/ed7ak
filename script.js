@@ -8,6 +8,7 @@ const i18n = {
     nav_gallery: { ar: 'ابتساماتنا', en: 'Smile Gallery' },
     nav_doctors: { ar: 'أطباؤنا', en: 'Our Doctors' },
     nav_branches: { ar: 'الفروع', en: 'Branches' },
+    nav_faq: { ar: 'الأسئلة الشائعة', en: 'FAQ' },
     nav_booking_nav: { ar: 'احجز الآن', en: 'Book Now' },
     btn_book_now: { ar: 'احجز الآن', en: 'Book Now' },
 
