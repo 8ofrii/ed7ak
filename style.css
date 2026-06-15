@@ -2737,6 +2737,11 @@ html[lang="ar"] .chat-send-btn:hover .chat-send-icon {
         min-height: 350px;
     }
     
+    .hero-media-collage {
+        min-height: 400px;
+        margin-top: 20px;
+    }
+    
     .footer-container {
         grid-template-columns: 1fr 1fr;
     }
@@ -2848,6 +2853,34 @@ html[lang="ar"] .chat-send-btn:hover .chat-send-icon {
         right: 15px !important;
         height: 350px !important; /* Slightly smaller height on mobile to fit nicely */
     }
+    
+    .hero-media-collage {
+        min-height: 380px;
+    }
+    .hero-media-collage .main-card {
+        width: 290px;
+        height: 340px;
+    }
+    .hero-media-collage .floating-experience {
+        left: -15px;
+        padding: 10px 14px;
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+    html[lang="en"] .hero-media-collage .floating-experience {
+        right: -15px;
+        left: auto;
+    }
+    .hero-media-collage .floating-trust {
+        right: -15px;
+        padding: 10px 14px;
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+    html[lang="en"] .hero-media-collage .floating-trust {
+        left: -15px;
+        right: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2878,6 +2911,32 @@ html[lang="ar"] .chat-send-btn:hover .chat-send-icon {
     
     .branch-buttons .btn {
         width: 100%;
+    }
+
+    .hero-media-collage {
+        min-height: 300px;
+    }
+    .hero-media-collage .main-card {
+        width: 240px;
+        height: 280px;
+    }
+    .hero-media-collage .floating-experience {
+        left: -5px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+    html[lang="en"] .hero-media-collage .floating-experience {
+        right: -5px;
+        left: auto;
+    }
+    .hero-media-collage .floating-trust {
+        right: -5px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+    html[lang="en"] .hero-media-collage .floating-trust {
+        left: -5px;
+        right: auto;
     }
 }
 
